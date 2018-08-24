@@ -1,0 +1,6 @@
+a^n . b^n
+Balanced String of Brackets
+WCW^R
+More no's of a's han b's: L={x => {a,b}*| n~a(x)>n~b(x)}
+WW^R
+a^i . b^j | i = j or j =2i

@@ -1,4 +1,4 @@
-/* Merge Sort - Integers */
+// Merge Sort - Two Blocks at last
 
 #include<stdlib.h>
 #include<stdio.h>
