@@ -1,0 +1,39 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\CLSID\{8933138B-3F64-11D1-BC4D-00A024C670D3}]
+@="Rose.Ada95AddIn"
+[HKEY_CLASSES_ROOT\CLSID\{8933138B-3F64-11D1-BC4D-00A024C670D3}\InProcServer32]
+@="%%INSTALL_DIR%%/addins/ada95/%%PLATFORM%%/libada95addin.%%DLL_EXT%%"
+[HKEY_CLASSES_ROOT\CLSID\{8933138B-3F64-11D1-BC4D-00A024C670D3}\ProgID]
+@="Rose.Ada95AddIn"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Ada 95]
+"Active"="Yes"
+"Company"=" IBM Rational Software"
+"Copyright"="Copyright 1997-2007 IBM Corp."
+"MenuFile"="roseada95.mnu"
+"HelpFileName"="roseada"
+"PropertyFile"="roseada95.pty"
+"LanguageAddIn"="Yes"
+"Version"="2006.0.0.705"
+"FundamentalTypes"="Boolean; Character; Duration; Float; Integer; Natural; Positive; String; Wide_Character; Wide_String"
+"OLEServer"="Rose.Ada95AddIn"
+"ToolDisplayName"="Ada95"
+"ToolName"="Ada95"
+"InstallDir"="%%INSTALL_DIR%%/addins/ada95"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Ada 95\Custom Settings]
+"SourceViewer"="shellexecute"
+"Analyzer"="reverse_engineer"
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Ada 95\Events]
+"OnActivate"="Interface"
+
+[HKEY_CLASSES_ROOT\Rose.Ada95AddIn]
+@="Rose.Ada95AddIn"
+
+[HKEY_CLASSES_ROOT\Rose.Ada95AddIn\CLSID]
+@="{8933138B-3F64-11D1-BC4D-00A024C670D3}"
+
+[HKEY_CURRENT_USER\SOFTWARE\Rational Software\Rose\Virtual Path Map]
+"ROSEADA95_SOURCE"="$HOME/source"

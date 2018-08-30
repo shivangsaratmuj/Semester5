@@ -1,0 +1,43 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\CLSID\{7933138B-3F64-11D1-BC4D-00A024C670D3}]
+@="Rose.CPPAddIn"
+[HKEY_CLASSES_ROOT\CLSID\{7933138B-3F64-11D1-BC4D-00A024C670D3}\InProcServer32]
+@="%%INSTALL_DIR%%/addins/c++/%%PLATFORM%%/libcppaddin.%%DLL_EXT%%"
+[HKEY_CLASSES_ROOT\CLSID\{7933138B-3F64-11D1-BC4D-00A024C670D3}\ProgID]
+@="Rose.CPPAddIn"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Rose C++]
+"Active"="No"
+"Company"="IBM Corporation"
+"Copyright"="Copyright 1992-2007 IBM Corp."
+"MenuFile"="rosecpp.mnu"
+"HelpFileName"="rosecpp"
+"PropertyFile"="rosecpp.pty"
+"LanguageAddIn"="Yes"
+"Version"="2006.0.705.2117"
+"FundamentalTypes"="char; int; long; short; float; double"
+"OLEServer"="Rose.CPPAddIn"
+"ToolDisplayName"="C++"
+"ToolName"="cg"
+"ToolList"="MSVC"
+"InstallDir"="%%INSTALL_DIR%%/addins/c++"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Rose C++\Custom Settings]
+"SourceViewer"="shellexecute"
+"Analyzer"="%%INSTALL_DIR%%/addins/c++/%%PLATFORM%%/analyzer"
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Rose C++\Events]
+"OnActivate"="Interface"
+"OnGenerateCode"="Interface"
+"OnBrowseBody"="Interface"
+"OnBrowseHeader"="Interface"
+
+[HKEY_CLASSES_ROOT\Rose.CPPAddIn]
+@="Rose.CPPAddIn"
+
+[HKEY_CLASSES_ROOT\Rose.CPPAddIn\CLSID]
+@="{7933138B-3F64-11D1-BC4D-00A024C670D3}"
+
+[HKEY_CURRENT_USER\SOFTWARE\Rational Software\Rose\Virtual Path Map]
+"ROSECPP_SOURCE"="$HOME/source"

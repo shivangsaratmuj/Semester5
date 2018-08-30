@@ -1,0 +1,665 @@
+
+Enter ? at any prompt to get help.
+
+Use existing settings in the .auto config file:
+  /boot/RosePatches/mkpatch/config_file.auto
+to automatically rebuild this patch?  [no] no
+
+Use the previous patch ID 600811201-8?  [yes] yes
+Okay, will reuse patch ID 600811201-8.
+16:27:35 --- Making a patch tar archive for Rational Rose  for UNIX/Linux 7.0.0.0/Linux/Intel i386
+16:27:35 --- ROOT dir: /root/rose_linux_fp4_patch
+16:27:35 +++ file: /root/rose_linux_fp4_patch/addins/ada83/i386_linux2/libada83addin.so
+16:27:35 ... dest: addins/ada83/i386_linux2/libada83addin.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ada83/i386_linux2/ada83addin.rsb
+16:27:36 ... dest: addins/ada83/i386_linux2/ada83addin.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ada95/i386_linux2/libada95addin.so
+16:27:36 ... dest: addins/ada95/i386_linux2/libada95addin.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ada95/i386_linux2/ada95addin.rsb
+16:27:36 ... dest: addins/ada95/i386_linux2/ada95addin.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ansic++/i386_linux2/libcppdll.so
+16:27:36 ... dest: addins/ansic++/i386_linux2/libcppdll.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ansic++/i386_linux2/cppdll.rsb
+16:27:36 ... dest: addins/ansic++/i386_linux2/cppdll.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/c++/i386_linux2/libcppaddin.so
+16:27:36 ... dest: addins/c++/i386_linux2/libcppaddin.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/c++/i386_linux2/cppaddin.rsb
+16:27:36 ... dest: addins/c++/i386_linux2/cppaddin.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/clearcase/i386_linux2/libclearcase_addin.so
+16:27:36 ... dest: addins/clearcase/i386_linux2/libclearcase_addin.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/clearcase/i386_linux2/clearcase_addin.rsb
+16:27:36 ... dest: addins/clearcase/i386_linux2/clearcase_addin.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/corba/i386_linux2/libcorba_addin.so
+16:27:36 ... dest: addins/corba/i386_linux2/libcorba_addin.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/corba/i386_linux2/corba_addin.rsb
+16:27:36 ... dest: addins/corba/i386_linux2/corba_addin.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/cppcvt/i386_linux2/libcppcvtk2.so
+16:27:36 ... dest: addins/cppcvt/i386_linux2/libcppcvtk2.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/cppcvt/i386_linux2/cppcvtk2.rsb
+16:27:36 ... dest: addins/cppcvt/i386_linux2/cppcvtk2.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/cppevent/i386_linux2/libcppevent.so
+16:27:36 ... dest: addins/cppevent/i386_linux2/libcppevent.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/cppevent/i386_linux2/cppevent.rsb
+16:27:36 ... dest: addins/cppevent/i386_linux2/cppevent.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/dtd/i386_linux2/libdtd_addin.so
+16:27:36 ... dest: addins/dtd/i386_linux2/libdtd_addin.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/dtd/i386_linux2/dtd_addin.rsb
+16:27:36 ... dest: addins/dtd/i386_linux2/dtd_addin.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/java/i386_linux2/librjava_addin.so
+16:27:36 ... dest: addins/java/i386_linux2/librjava_addin.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/java/i386_linux2/rjava_addin.rsb
+16:27:36 ... dest: addins/java/i386_linux2/rjava_addin.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/java/java2rei/i386_linux2/libjava2rei.so
+16:27:36 ... dest: addins/java/java2rei/i386_linux2/libjava2rei.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/java/java2rei/i386_linux2/java2rei.rsb
+16:27:36 ... dest: addins/java/java2rei/i386_linux2/java2rei.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/compare.rsb
+16:27:36 ... dest: addins/mdlint/i386_linux2/compare.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/merge.rsb
+16:27:36 ... dest: addins/mdlint/i386_linux2/merge.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/modelint
+16:27:36 ... dest: addins/mdlint/i386_linux2/modelint, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/modelint.rsb
+16:27:36 ... dest: addins/mdlint/i386_linux2/modelint.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/xcompare.rsb
+16:27:36 ... dest: addins/mdlint/i386_linux2/xcompare.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/xmerge.rsb
+16:27:36 ... dest: addins/mdlint/i386_linux2/xmerge.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/rosewp/i386_linux2/librwebutil.so
+16:27:36 ... dest: addins/rosewp/i386_linux2/librwebutil.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/rosewp/i386_linux2/rwebutil.rsb
+16:27:36 ... dest: addins/rosewp/i386_linux2/rwebutil.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/bin/rjavarelay
+16:27:36 ... dest: i386_linux2/bin/rjavarelay, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/bin/rjavarelay.rsb
+16:27:36 ... dest: i386_linux2/bin/rjavarelay.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/bin/rose_exe
+16:27:36 ... dest: i386_linux2/bin/rose_exe, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/bin/rose_exe.rsb
+16:27:36 ... dest: i386_linux2/bin/rose_exe.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/bin/Rose_Message_Server
+16:27:36 ... dest: i386_linux2/bin/Rose_Message_Server, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/bin/rosemsg
+16:27:36 ... dest: i386_linux2/bin/rosemsg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/lib/libRForteReceiver.so
+16:27:36 ... dest: i386_linux2/lib/libRForteReceiver.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/lib/libRJBuilderReceiver.so
+16:27:36 ... dest: i386_linux2/lib/libRJBuilderReceiver.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/lib/RForteReceiver.rsb
+16:27:36 ... dest: i386_linux2/lib/RForteReceiver.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/i386_linux2/lib/RJBuilderReceiver.rsb
+16:27:36 ... dest: i386_linux2/lib/RJBuilderReceiver.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ada95/rose_ada95.cx
+16:27:36 ... dest: addins/ada95/rose_ada95.cx, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ada95/ada95.reg
+16:27:36 ... dest: addins/ada95/ada95.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ada95/roseada95.pty
+16:27:36 ... dest: addins/ada95/roseada95.pty, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ada83/ada83.reg
+16:27:36 ... dest: addins/ada83/ada83.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ansic++/ansic++.reg
+16:27:36 ... dest: addins/ansic++/ansic++.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/ansic++/cpp.pty
+16:27:36 ... dest: addins/ansic++/cpp.pty, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/cppcvt/cppcvt.reg
+16:27:36 ... dest: addins/cppcvt/cppcvt.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/cppevent/cppevent.reg
+16:27:36 ... dest: addins/cppevent/cppevent.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/corba/corba.reg
+16:27:36 ... dest: addins/corba/corba.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/java/java.reg
+16:27:36 ... dest: addins/java/java.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/c++/rosecpp.cx
+16:27:36 ... dest: addins/c++/rosecpp.cx, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/c++/rosecpp.pty
+16:27:36 ... dest: addins/c++/rosecpp.pty, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/c++/c++.reg
+16:27:36 ... dest: addins/c++/c++.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/mdlint/mdlint.reg
+16:27:36 ... dest: addins/mdlint/mdlint.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/rosewp/rosewp.reg
+16:27:36 ... dest: addins/rosewp/rosewp.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/rosewp/files/frames.html
+16:27:36 ... dest: addins/rosewp/files/frames.html, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/rosewp/files/root.html
+16:27:36 ... dest: addins/rosewp/files/root.html, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/rosewp/files/browser.jar
+16:27:36 ... dest: addins/rosewp/files/browser.jar, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/rosewp/files/contents.html
+16:27:36 ... dest: addins/rosewp/files/contents.html, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/addins/dtd/dtd.reg
+16:27:36 ... dest: addins/dtd/dtd.reg, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/mw/lib-linux_optimized/gdiuser32.rsb
+16:27:36 ... dest: mw/lib-linux_optimized/gdiuser32.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/mw/lib-linux_optimized/kernel32.rsb
+16:27:36 ... dest: mw/lib-linux_optimized/kernel32.rsb, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/mw/lib-linux_optimized/libgdiuser32.so
+16:27:36 ... dest: mw/lib-linux_optimized/libgdiuser32.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/mw/lib-linux_optimized/libkernel32.so
+16:27:36 ... dest: mw/lib-linux_optimized/libkernel32.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/mw/lib-linux_optimized/libpslib.so
+16:27:36 ... dest: mw/lib-linux_optimized/libpslib.so, chmod 755
+16:27:36 +++ file: /root/rose_linux_fp4_patch/help/scripto.hlp
+16:27:36 ... dest: help/scripto.hlp, chmod 755
+16:27:36 +++ The patch configuration file is okay.
+16:27:36 --- 67 items to be included in the patch.
+16:27:36 --- Using from a previous run: patch ID: 600811201-8
+PATCH_DIR: /RosePatches/roseunix.7.0.0.0/600811201-8
+
+Will create patch for Rational Rose  for UNIX/Linux 7.0.0.0/Linux/Intel i386
+
+Do you want to continue with makepatch?  [yes] yes
+16:27:37 ::: [cd /RosePatches/roseunix.7.0.0.0]
+
+Replace existing files in /RosePatches/roseunix.7.0.0.0/600811201-8?  [yes] yes
+16:27:37 ::: [mkdir /RosePatches/roseunix.7.0.0.0/600811201-8]
+16:27:37 ::: [cd /RosePatches/roseunix.7.0.0.0/600811201-8]
+
+Enter alternate version, or none:  [none] none
+Okay, this patch cannot be applied to any other version.
+
+Enter any roseunix.7.0.0.0 install commands to run
+once the patch has been installed.
+
+Enter commands:  [none] none
+Okay, this patch will not run any special commands.
+
+Enter prerequisite location (base,releases,none):  [releases] releases
+Okay, this patch will require a release prerequisite file or dir.
+
+Select a 'prerequisite failed' message:
+
+    1) This patch is intended for Rational Rose  for UNIX/Linux 7.0.0.0/Linux/Intel i386.
+    2) This patch is intended for Rational Rose  for UNIX/Linux 7.0.0.0.
+    3) This patch is intended for Rational Rose  for UNIX/Linux.
+    *) Other message.
+
+Enter 1, 2, 3 or message:  [This patch is intended for Rational Rose  for UNIX/Linux 7.0.0.0/Linux/Intel i386.] This patch is intended for Rational Rose  for UNIX/Linux 7.0.0.0/Linux/Intel i386.
+
+Enter, relative to the releases/rose.7.0.0.0 directory,
+a file or directory to use as the prerequisite
+:  [addins/ada83/i386_linux2/libada83addin.so] addins/ada83/i386_linux2/libada83addin.so
+
+Do you want makepatch to report on disk space usage when done?  [no] no
+
+After the patch is built, what would you like to do with it:
+
+>>>> c ) Clean up the 600811201-8 patch directory.
+           (Spare the tar archive, install script, and readme file.)
+     s ) Spare the 600811201-8 patch directory.
+     r ) Remove the 600811201-8 patch directory.
+
+Enter option clean, spare, or remove:  [c] c
+
+------------------------------------------------------------------------------
+    If you want to make this patch available on FTP you must
+    notify  (trarnold@us.ibm.com) to run this command:
+
+        rpp_submit_patch 600811201-8
+
+
+Would you like makepatch to send Tom Arnold an e-mail to do this?  [no] no
+16:27:40 ::: [mkdir addins/ada83/i386_linux2]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ada83/i386_linux2/libada83addin.so addins/ada83/i386_linux2/libada83addin.so]
+16:27:40 ::: [chmod 755 addins/ada83/i386_linux2/libada83addin.so]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ada83/i386_linux2/ada83addin.rsb addins/ada83/i386_linux2/ada83addin.rsb]
+16:27:40 ::: [chmod 755 addins/ada83/i386_linux2/ada83addin.rsb]
+16:27:40 ::: [mkdir addins/ada95/i386_linux2]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ada95/i386_linux2/libada95addin.so addins/ada95/i386_linux2/libada95addin.so]
+16:27:40 ::: [chmod 755 addins/ada95/i386_linux2/libada95addin.so]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ada95/i386_linux2/ada95addin.rsb addins/ada95/i386_linux2/ada95addin.rsb]
+16:27:40 ::: [chmod 755 addins/ada95/i386_linux2/ada95addin.rsb]
+16:27:40 ::: [mkdir addins/ansic++/i386_linux2]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ansic++/i386_linux2/libcppdll.so addins/ansic++/i386_linux2/libcppdll.so]
+16:27:40 ::: [chmod 755 addins/ansic++/i386_linux2/libcppdll.so]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ansic++/i386_linux2/cppdll.rsb addins/ansic++/i386_linux2/cppdll.rsb]
+16:27:40 ::: [chmod 755 addins/ansic++/i386_linux2/cppdll.rsb]
+16:27:40 ::: [mkdir addins/c++/i386_linux2]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/c++/i386_linux2/libcppaddin.so addins/c++/i386_linux2/libcppaddin.so]
+16:27:40 ::: [chmod 755 addins/c++/i386_linux2/libcppaddin.so]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/c++/i386_linux2/cppaddin.rsb addins/c++/i386_linux2/cppaddin.rsb]
+16:27:40 ::: [chmod 755 addins/c++/i386_linux2/cppaddin.rsb]
+16:27:40 ::: [mkdir addins/clearcase/i386_linux2]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/clearcase/i386_linux2/libclearcase_addin.so addins/clearcase/i386_linux2/libclearcase_addin.so]
+16:27:40 ::: [chmod 755 addins/clearcase/i386_linux2/libclearcase_addin.so]
+16:27:40 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/clearcase/i386_linux2/clearcase_addin.rsb addins/clearcase/i386_linux2/clearcase_addin.rsb]
+16:27:40 ::: [chmod 755 addins/clearcase/i386_linux2/clearcase_addin.rsb]
+16:27:41 ::: [mkdir addins/corba/i386_linux2]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/corba/i386_linux2/libcorba_addin.so addins/corba/i386_linux2/libcorba_addin.so]
+16:27:41 ::: [chmod 755 addins/corba/i386_linux2/libcorba_addin.so]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/corba/i386_linux2/corba_addin.rsb addins/corba/i386_linux2/corba_addin.rsb]
+16:27:41 ::: [chmod 755 addins/corba/i386_linux2/corba_addin.rsb]
+16:27:41 ::: [mkdir addins/cppcvt/i386_linux2]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/cppcvt/i386_linux2/libcppcvtk2.so addins/cppcvt/i386_linux2/libcppcvtk2.so]
+16:27:41 ::: [chmod 755 addins/cppcvt/i386_linux2/libcppcvtk2.so]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/cppcvt/i386_linux2/cppcvtk2.rsb addins/cppcvt/i386_linux2/cppcvtk2.rsb]
+16:27:41 ::: [chmod 755 addins/cppcvt/i386_linux2/cppcvtk2.rsb]
+16:27:41 ::: [mkdir addins/cppevent/i386_linux2]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/cppevent/i386_linux2/libcppevent.so addins/cppevent/i386_linux2/libcppevent.so]
+16:27:41 ::: [chmod 755 addins/cppevent/i386_linux2/libcppevent.so]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/cppevent/i386_linux2/cppevent.rsb addins/cppevent/i386_linux2/cppevent.rsb]
+16:27:41 ::: [chmod 755 addins/cppevent/i386_linux2/cppevent.rsb]
+16:27:41 ::: [mkdir addins/dtd/i386_linux2]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/dtd/i386_linux2/libdtd_addin.so addins/dtd/i386_linux2/libdtd_addin.so]
+16:27:41 ::: [chmod 755 addins/dtd/i386_linux2/libdtd_addin.so]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/dtd/i386_linux2/dtd_addin.rsb addins/dtd/i386_linux2/dtd_addin.rsb]
+16:27:41 ::: [chmod 755 addins/dtd/i386_linux2/dtd_addin.rsb]
+16:27:41 ::: [mkdir addins/java/i386_linux2]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/java/i386_linux2/librjava_addin.so addins/java/i386_linux2/librjava_addin.so]
+16:27:41 ::: [chmod 755 addins/java/i386_linux2/librjava_addin.so]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/java/i386_linux2/rjava_addin.rsb addins/java/i386_linux2/rjava_addin.rsb]
+16:27:41 ::: [chmod 755 addins/java/i386_linux2/rjava_addin.rsb]
+16:27:41 ::: [mkdir addins/java/java2rei/i386_linux2]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/java/java2rei/i386_linux2/libjava2rei.so addins/java/java2rei/i386_linux2/libjava2rei.so]
+16:27:41 ::: [chmod 755 addins/java/java2rei/i386_linux2/libjava2rei.so]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/java/java2rei/i386_linux2/java2rei.rsb addins/java/java2rei/i386_linux2/java2rei.rsb]
+16:27:41 ::: [chmod 755 addins/java/java2rei/i386_linux2/java2rei.rsb]
+16:27:41 ::: [mkdir addins/mdlint/i386_linux2]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/compare.rsb addins/mdlint/i386_linux2/compare.rsb]
+16:27:41 ::: [chmod 755 addins/mdlint/i386_linux2/compare.rsb]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/merge.rsb addins/mdlint/i386_linux2/merge.rsb]
+16:27:41 ::: [chmod 755 addins/mdlint/i386_linux2/merge.rsb]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/modelint addins/mdlint/i386_linux2/modelint]
+16:27:41 ::: [chmod 755 addins/mdlint/i386_linux2/modelint]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/modelint.rsb addins/mdlint/i386_linux2/modelint.rsb]
+16:27:41 ::: [chmod 755 addins/mdlint/i386_linux2/modelint.rsb]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/xcompare.rsb addins/mdlint/i386_linux2/xcompare.rsb]
+16:27:41 ::: [chmod 755 addins/mdlint/i386_linux2/xcompare.rsb]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/mdlint/i386_linux2/xmerge.rsb addins/mdlint/i386_linux2/xmerge.rsb]
+16:27:41 ::: [chmod 755 addins/mdlint/i386_linux2/xmerge.rsb]
+16:27:41 ::: [mkdir addins/rosewp/i386_linux2]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/rosewp/i386_linux2/librwebutil.so addins/rosewp/i386_linux2/librwebutil.so]
+16:27:41 ::: [chmod 755 addins/rosewp/i386_linux2/librwebutil.so]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/rosewp/i386_linux2/rwebutil.rsb addins/rosewp/i386_linux2/rwebutil.rsb]
+16:27:41 ::: [chmod 755 addins/rosewp/i386_linux2/rwebutil.rsb]
+16:27:41 ::: [mkdir i386_linux2/bin]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/bin/rjavarelay i386_linux2/bin/rjavarelay]
+16:27:41 ::: [chmod 755 i386_linux2/bin/rjavarelay]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/bin/rjavarelay.rsb i386_linux2/bin/rjavarelay.rsb]
+16:27:41 ::: [chmod 755 i386_linux2/bin/rjavarelay.rsb]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/bin/rose_exe i386_linux2/bin/rose_exe]
+16:27:41 ::: [chmod 755 i386_linux2/bin/rose_exe]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/bin/rose_exe.rsb i386_linux2/bin/rose_exe.rsb]
+16:27:41 ::: [chmod 755 i386_linux2/bin/rose_exe.rsb]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/bin/Rose_Message_Server i386_linux2/bin/Rose_Message_Server]
+16:27:41 ::: [chmod 755 i386_linux2/bin/Rose_Message_Server]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/bin/rosemsg i386_linux2/bin/rosemsg]
+16:27:41 ::: [chmod 755 i386_linux2/bin/rosemsg]
+16:27:41 ::: [mkdir i386_linux2/lib]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/lib/libRForteReceiver.so i386_linux2/lib/libRForteReceiver.so]
+16:27:41 ::: [chmod 755 i386_linux2/lib/libRForteReceiver.so]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/lib/libRJBuilderReceiver.so i386_linux2/lib/libRJBuilderReceiver.so]
+16:27:41 ::: [chmod 755 i386_linux2/lib/libRJBuilderReceiver.so]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/lib/RForteReceiver.rsb i386_linux2/lib/RForteReceiver.rsb]
+16:27:41 ::: [chmod 755 i386_linux2/lib/RForteReceiver.rsb]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/i386_linux2/lib/RJBuilderReceiver.rsb i386_linux2/lib/RJBuilderReceiver.rsb]
+16:27:41 ::: [chmod 755 i386_linux2/lib/RJBuilderReceiver.rsb]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ada95/rose_ada95.cx addins/ada95/rose_ada95.cx]
+16:27:41 ::: [chmod 755 addins/ada95/rose_ada95.cx]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ada95/ada95.reg addins/ada95/ada95.reg]
+16:27:41 ::: [chmod 755 addins/ada95/ada95.reg]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ada95/roseada95.pty addins/ada95/roseada95.pty]
+16:27:41 ::: [chmod 755 addins/ada95/roseada95.pty]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ada83/ada83.reg addins/ada83/ada83.reg]
+16:27:41 ::: [chmod 755 addins/ada83/ada83.reg]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ansic++/ansic++.reg addins/ansic++/ansic++.reg]
+16:27:41 ::: [chmod 755 addins/ansic++/ansic++.reg]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/ansic++/cpp.pty addins/ansic++/cpp.pty]
+16:27:41 ::: [chmod 755 addins/ansic++/cpp.pty]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/cppcvt/cppcvt.reg addins/cppcvt/cppcvt.reg]
+16:27:41 ::: [chmod 755 addins/cppcvt/cppcvt.reg]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/cppevent/cppevent.reg addins/cppevent/cppevent.reg]
+16:27:41 ::: [chmod 755 addins/cppevent/cppevent.reg]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/corba/corba.reg addins/corba/corba.reg]
+16:27:41 ::: [chmod 755 addins/corba/corba.reg]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/java/java.reg addins/java/java.reg]
+16:27:41 ::: [chmod 755 addins/java/java.reg]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/c++/rosecpp.cx addins/c++/rosecpp.cx]
+16:27:41 ::: [chmod 755 addins/c++/rosecpp.cx]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/c++/rosecpp.pty addins/c++/rosecpp.pty]
+16:27:41 ::: [chmod 755 addins/c++/rosecpp.pty]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/c++/c++.reg addins/c++/c++.reg]
+16:27:41 ::: [chmod 755 addins/c++/c++.reg]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/mdlint/mdlint.reg addins/mdlint/mdlint.reg]
+16:27:41 ::: [chmod 755 addins/mdlint/mdlint.reg]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/rosewp/rosewp.reg addins/rosewp/rosewp.reg]
+16:27:41 ::: [chmod 755 addins/rosewp/rosewp.reg]
+16:27:41 ::: [mkdir addins/rosewp/files]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/rosewp/files/frames.html addins/rosewp/files/frames.html]
+16:27:41 ::: [chmod 755 addins/rosewp/files/frames.html]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/rosewp/files/root.html addins/rosewp/files/root.html]
+16:27:41 ::: [chmod 755 addins/rosewp/files/root.html]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/rosewp/files/browser.jar addins/rosewp/files/browser.jar]
+16:27:41 ::: [chmod 755 addins/rosewp/files/browser.jar]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/rosewp/files/contents.html addins/rosewp/files/contents.html]
+16:27:41 ::: [chmod 755 addins/rosewp/files/contents.html]
+16:27:41 ::: [/bin/cp -p /root/rose_linux_fp4_patch/addins/dtd/dtd.reg addins/dtd/dtd.reg]
+16:27:41 ::: [chmod 755 addins/dtd/dtd.reg]
+16:27:42 ::: [mkdir mw/lib-linux_optimized]
+16:27:42 ::: [/bin/cp -p /root/rose_linux_fp4_patch/mw/lib-linux_optimized/gdiuser32.rsb mw/lib-linux_optimized/gdiuser32.rsb]
+16:27:42 ::: [chmod 755 mw/lib-linux_optimized/gdiuser32.rsb]
+16:27:42 ::: [/bin/cp -p /root/rose_linux_fp4_patch/mw/lib-linux_optimized/kernel32.rsb mw/lib-linux_optimized/kernel32.rsb]
+16:27:42 ::: [chmod 755 mw/lib-linux_optimized/kernel32.rsb]
+16:27:42 ::: [/bin/cp -p /root/rose_linux_fp4_patch/mw/lib-linux_optimized/libgdiuser32.so mw/lib-linux_optimized/libgdiuser32.so]
+16:27:42 ::: [chmod 755 mw/lib-linux_optimized/libgdiuser32.so]
+16:27:42 ::: [/bin/cp -p /root/rose_linux_fp4_patch/mw/lib-linux_optimized/libkernel32.so mw/lib-linux_optimized/libkernel32.so]
+16:27:42 ::: [chmod 755 mw/lib-linux_optimized/libkernel32.so]
+16:27:42 ::: [/bin/cp -p /root/rose_linux_fp4_patch/mw/lib-linux_optimized/libpslib.so mw/lib-linux_optimized/libpslib.so]
+16:27:42 ::: [chmod 755 mw/lib-linux_optimized/libpslib.so]
+16:27:42 ::: [mkdir help]
+16:27:42 ::: [/bin/cp -p /root/rose_linux_fp4_patch/help/scripto.hlp help/scripto.hlp]
+16:27:42 ::: [chmod 755 help/scripto.hlp]
+16:27:42 --- Fixing permissions on all files and directories,
+16:27:42 ... except for sym links and apex subsystem views.
+16:27:42 ... Files will be read-only (-r--r--r--).
+16:27:42 ... Executables will be read-exe (-r-xr-xr-x).
+16:27:42 ... Directories will be writable by user, read-exe
+16:27:42 ... for all (drwxr-xr-x).
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ada83/ada83.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ada83/i386_linux2/ada83addin.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ada83/i386_linux2/libada83addin.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ada95/ada95.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ada95/i386_linux2/ada95addin.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ada95/i386_linux2/libada95addin.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ada95/rose_ada95.cx
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ada95/roseada95.pty
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ansic++/ansic++.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ansic++/cpp.pty
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ansic++/i386_linux2/cppdll.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/ansic++/i386_linux2/libcppdll.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/c++/c++.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/c++/i386_linux2/cppaddin.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/c++/i386_linux2/libcppaddin.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/clearcase/i386_linux2/clearcase_addin.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/clearcase/i386_linux2/libclearcase_addin.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/corba/corba.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/corba/i386_linux2/corba_addin.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/corba/i386_linux2/libcorba_addin.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/cppcvt/cppcvt.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/cppcvt/i386_linux2/cppcvtk2.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/cppcvt/i386_linux2/libcppcvtk2.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/cppevent/cppevent.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/cppevent/i386_linux2/cppevent.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/cppevent/i386_linux2/libcppevent.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/c++/rosecpp.cx
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/c++/rosecpp.pty
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/dtd/dtd.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/dtd/i386_linux2/dtd_addin.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/dtd/i386_linux2/libdtd_addin.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/java/i386_linux2/librjava_addin.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/java/i386_linux2/rjava_addin.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/java/java2rei/i386_linux2/java2rei.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/java/java2rei/i386_linux2/libjava2rei.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/java/java.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/mdlint/i386_linux2/compare.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/mdlint/i386_linux2/merge.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/mdlint/i386_linux2/modelint
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/mdlint/i386_linux2/modelint.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/mdlint/i386_linux2/xcompare.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/mdlint/i386_linux2/xmerge.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/mdlint/mdlint.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/rosewp/files/browser.jar
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/rosewp/files/contents.html
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/rosewp/files/frames.html
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/rosewp/files/root.html
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/rosewp/i386_linux2/librwebutil.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/rosewp/i386_linux2/rwebutil.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for addins/rosewp/rosewp.reg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for help/scripto.hlp
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/bin/rjavarelay
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/bin/rjavarelay.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/bin/rose_exe
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/bin/rose_exe.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/bin/Rose_Message_Server
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/bin/rosemsg
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/lib/libRForteReceiver.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/lib/libRJBuilderReceiver.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/lib/RForteReceiver.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for i386_linux2/lib/RJBuilderReceiver.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for mw/lib-linux_optimized/gdiuser32.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for mw/lib-linux_optimized/kernel32.rsb
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for mw/lib-linux_optimized/libgdiuser32.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for mw/lib-linux_optimized/libkernel32.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 !!! Permissions '-rwxr-xr-x' for mw/lib-linux_optimized/libpslib.so
+16:27:42 ... changed to: '-r-xr-xr-x'
+16:27:42 ::: [tar -cvf i386_linux2.patch.600811201-8.tar]
+addins/ada83/i386_linux2/libada83addin.so
+addins/ada83/i386_linux2/ada83addin.rsb
+addins/ada95/i386_linux2/libada95addin.so
+addins/ada95/i386_linux2/ada95addin.rsb
+addins/ansic++/i386_linux2/libcppdll.so
+addins/ansic++/i386_linux2/cppdll.rsb
+addins/c++/i386_linux2/libcppaddin.so
+addins/c++/i386_linux2/cppaddin.rsb
+addins/clearcase/i386_linux2/libclearcase_addin.so
+addins/clearcase/i386_linux2/clearcase_addin.rsb
+addins/corba/i386_linux2/libcorba_addin.so
+addins/corba/i386_linux2/corba_addin.rsb
+addins/cppcvt/i386_linux2/libcppcvtk2.so
+addins/cppcvt/i386_linux2/cppcvtk2.rsb
+addins/cppevent/i386_linux2/libcppevent.so
+addins/cppevent/i386_linux2/cppevent.rsb
+addins/dtd/i386_linux2/libdtd_addin.so
+addins/dtd/i386_linux2/dtd_addin.rsb
+addins/java/i386_linux2/librjava_addin.so
+addins/java/i386_linux2/rjava_addin.rsb
+addins/java/java2rei/i386_linux2/libjava2rei.so
+addins/java/java2rei/i386_linux2/java2rei.rsb
+addins/mdlint/i386_linux2/compare.rsb
+addins/mdlint/i386_linux2/merge.rsb
+addins/mdlint/i386_linux2/modelint
+addins/mdlint/i386_linux2/modelint.rsb
+addins/mdlint/i386_linux2/xcompare.rsb
+addins/mdlint/i386_linux2/xmerge.rsb
+addins/rosewp/i386_linux2/librwebutil.so
+addins/rosewp/i386_linux2/rwebutil.rsb
+i386_linux2/bin/rjavarelay
+i386_linux2/bin/rjavarelay.rsb
+i386_linux2/bin/rose_exe
+i386_linux2/bin/rose_exe.rsb
+i386_linux2/bin/Rose_Message_Server
+i386_linux2/bin/rosemsg
+i386_linux2/lib/libRForteReceiver.so
+i386_linux2/lib/libRJBuilderReceiver.so
+i386_linux2/lib/RForteReceiver.rsb
+i386_linux2/lib/RJBuilderReceiver.rsb
+addins/ada95/rose_ada95.cx
+addins/ada95/ada95.reg
+addins/ada95/roseada95.pty
+addins/ada83/ada83.reg
+addins/ansic++/ansic++.reg
+addins/ansic++/cpp.pty
+addins/cppcvt/cppcvt.reg
+addins/cppevent/cppevent.reg
+addins/corba/corba.reg
+addins/java/java.reg
+addins/c++/rosecpp.cx
+addins/c++/rosecpp.pty
+addins/c++/c++.reg
+addins/mdlint/mdlint.reg
+addins/rosewp/rosewp.reg
+addins/rosewp/files/frames.html
+addins/rosewp/files/root.html
+addins/rosewp/files/browser.jar
+addins/rosewp/files/contents.html
+addins/dtd/dtd.reg
+mw/lib-linux_optimized/gdiuser32.rsb
+mw/lib-linux_optimized/kernel32.rsb
+mw/lib-linux_optimized/libgdiuser32.so
+mw/lib-linux_optimized/libkernel32.so
+mw/lib-linux_optimized/libpslib.so
+help/scripto.hlp
+16:27:43 ::: [compress i386_linux2.patch.600811201-8.tar]
+16:27:52 ::: [/bin/rm -f /RosePatches/PID_DB/6008/600811201-8]
+16:27:52 --- Updating entry for patch 600811201-8 in patch database...
+16:27:52 ::: [cp -p install_i386_linux2_600811201_8 /RosePatches/PIPD_DB//software/rational/Rose__UNIX/7.0.0.0/Linux/600811201-8/install_i386_linux2_600811201_8]
+16:27:52 --- makepatch completed.  Cleaning up...
+/bin/mv: cannot move `/RosePatches/Current/root-lin-rosebld01-2008.12.15-16:27-22266' to `/RosePatches/Completed/root-600811201-8': No such file or directory
+
+16:27:52 --- Cleaning files in /RosePatches/roseunix.7.0.0.0/600811201-8...
+16:27:52 ::: [/bin/rm -f addins/ada83/i386_linux2/libada83addin.so]
+16:27:52 ::: [/bin/rm -f addins/ada83/i386_linux2/ada83addin.rsb]
+16:27:52 ::: [/bin/rm -f addins/ada95/i386_linux2/libada95addin.so]
+16:27:52 ::: [/bin/rm -f addins/ada95/i386_linux2/ada95addin.rsb]
+16:27:52 ::: [/bin/rm -f addins/ansic++/i386_linux2/libcppdll.so]
+16:27:52 ::: [/bin/rm -f addins/ansic++/i386_linux2/cppdll.rsb]
+16:27:52 ::: [/bin/rm -f addins/c++/i386_linux2/libcppaddin.so]
+16:27:52 ::: [/bin/rm -f addins/c++/i386_linux2/cppaddin.rsb]
+16:27:52 ::: [/bin/rm -f addins/clearcase/i386_linux2/libclearcase_addin.so]
+16:27:52 ::: [/bin/rm -f addins/clearcase/i386_linux2/clearcase_addin.rsb]
+16:27:52 ::: [/bin/rm -f addins/corba/i386_linux2/libcorba_addin.so]
+16:27:52 ::: [/bin/rm -f addins/corba/i386_linux2/corba_addin.rsb]
+16:27:52 ::: [/bin/rm -f addins/cppcvt/i386_linux2/libcppcvtk2.so]
+16:27:52 ::: [/bin/rm -f addins/cppcvt/i386_linux2/cppcvtk2.rsb]
+16:27:52 ::: [/bin/rm -f addins/cppevent/i386_linux2/libcppevent.so]
+16:27:52 ::: [/bin/rm -f addins/cppevent/i386_linux2/cppevent.rsb]
+16:27:52 ::: [/bin/rm -f addins/dtd/i386_linux2/libdtd_addin.so]
+16:27:52 ::: [/bin/rm -f addins/dtd/i386_linux2/dtd_addin.rsb]
+16:27:52 ::: [/bin/rm -f addins/java/i386_linux2/librjava_addin.so]
+16:27:52 ::: [/bin/rm -f addins/java/i386_linux2/rjava_addin.rsb]
+16:27:52 ::: [/bin/rm -f addins/java/java2rei/i386_linux2/libjava2rei.so]
+16:27:52 ::: [/bin/rm -f addins/java/java2rei/i386_linux2/java2rei.rsb]
+16:27:52 ::: [/bin/rm -f addins/mdlint/i386_linux2/compare.rsb]
+16:27:52 ::: [/bin/rm -f addins/mdlint/i386_linux2/merge.rsb]
+16:27:52 ::: [/bin/rm -f addins/mdlint/i386_linux2/modelint]
+16:27:52 ::: [/bin/rm -f addins/mdlint/i386_linux2/modelint.rsb]
+16:27:52 ::: [/bin/rm -f addins/mdlint/i386_linux2/xcompare.rsb]
+16:27:52 ::: [/bin/rm -f addins/mdlint/i386_linux2/xmerge.rsb]
+16:27:52 ::: [/bin/rm -f addins/rosewp/i386_linux2/librwebutil.so]
+16:27:52 ::: [/bin/rm -f addins/rosewp/i386_linux2/rwebutil.rsb]
+16:27:52 ::: [/bin/rm -f i386_linux2/bin/rjavarelay]
+16:27:52 ::: [/bin/rm -f i386_linux2/bin/rjavarelay.rsb]
+16:27:52 ::: [/bin/rm -f i386_linux2/bin/rose_exe]
+16:27:52 ::: [/bin/rm -f i386_linux2/bin/rose_exe.rsb]
+16:27:52 ::: [/bin/rm -f i386_linux2/bin/Rose_Message_Server]
+16:27:52 ::: [/bin/rm -f i386_linux2/bin/rosemsg]
+16:27:52 ::: [/bin/rm -f i386_linux2/lib/libRForteReceiver.so]
+16:27:52 ::: [/bin/rm -f i386_linux2/lib/libRJBuilderReceiver.so]
+16:27:52 ::: [/bin/rm -f i386_linux2/lib/RForteReceiver.rsb]
+16:27:52 ::: [/bin/rm -f i386_linux2/lib/RJBuilderReceiver.rsb]
+16:27:52 ::: [/bin/rm -f addins/ada95/rose_ada95.cx]
+16:27:52 ::: [/bin/rm -f addins/ada95/ada95.reg]
+16:27:52 ::: [/bin/rm -f addins/ada95/roseada95.pty]
+16:27:52 ::: [/bin/rm -f addins/ada83/ada83.reg]
+16:27:52 ::: [/bin/rm -f addins/ansic++/ansic++.reg]
+16:27:52 ::: [/bin/rm -f addins/ansic++/cpp.pty]
+16:27:52 ::: [/bin/rm -f addins/cppcvt/cppcvt.reg]
+16:27:52 ::: [/bin/rm -f addins/cppevent/cppevent.reg]
+16:27:52 ::: [/bin/rm -f addins/corba/corba.reg]
+16:27:52 ::: [/bin/rm -f addins/java/java.reg]
+16:27:52 ::: [/bin/rm -f addins/c++/rosecpp.cx]
+16:27:52 ::: [/bin/rm -f addins/c++/rosecpp.pty]
+16:27:52 ::: [/bin/rm -f addins/c++/c++.reg]
+16:27:52 ::: [/bin/rm -f addins/mdlint/mdlint.reg]
+16:27:52 ::: [/bin/rm -f addins/rosewp/rosewp.reg]
+16:27:52 ::: [/bin/rm -f addins/rosewp/files/frames.html]
+16:27:52 ::: [/bin/rm -f addins/rosewp/files/root.html]
+16:27:52 ::: [/bin/rm -f addins/rosewp/files/browser.jar]
+16:27:52 ::: [/bin/rm -f addins/rosewp/files/contents.html]
+16:27:52 ::: [/bin/rm -f addins/dtd/dtd.reg]
+16:27:52 ::: [/bin/rm -f mw/lib-linux_optimized/gdiuser32.rsb]
+16:27:52 ::: [/bin/rm -f mw/lib-linux_optimized/kernel32.rsb]
+16:27:52 ::: [/bin/rm -f mw/lib-linux_optimized/libgdiuser32.so]
+16:27:52 ::: [/bin/rm -f mw/lib-linux_optimized/libkernel32.so]
+16:27:52 ::: [/bin/rm -f mw/lib-linux_optimized/libpslib.so]
+16:27:52 ::: [/bin/rm -f help/scripto.hlp]
+16:27:52 ::: [rmdir mw/lib-linux_optimized]
+16:27:52 ::: [rmdir mw]
+16:27:52 ::: [rmdir i386_linux2/lib]
+16:27:52 ::: [rmdir i386_linux2/bin]
+16:27:52 ::: [rmdir i386_linux2]
+16:27:52 ::: [rmdir help]
+16:27:52 ::: [rmdir addins/rosewp/i386_linux2]
+16:27:52 ::: [rmdir addins/rosewp/files]
+16:27:52 ::: [rmdir addins/rosewp]
+16:27:52 ::: [rmdir addins/mdlint/i386_linux2]
+16:27:52 ::: [rmdir addins/mdlint]
+16:27:52 ::: [rmdir addins/java/java2rei/i386_linux2]
+16:27:52 ::: [rmdir addins/java/java2rei]
+16:27:52 ::: [rmdir addins/java/i386_linux2]
+16:27:52 ::: [rmdir addins/java]
+16:27:52 ::: [rmdir addins/dtd/i386_linux2]
+16:27:52 ::: [rmdir addins/dtd]
+16:27:52 ::: [rmdir addins/cppevent/i386_linux2]
+16:27:52 ::: [rmdir addins/cppevent]
+16:27:52 ::: [rmdir addins/cppcvt/i386_linux2]
+16:27:52 ::: [rmdir addins/cppcvt]
+16:27:52 ::: [rmdir addins/corba/i386_linux2]
+16:27:52 ::: [rmdir addins/corba]
+16:27:52 ::: [rmdir addins/clearcase/i386_linux2]
+16:27:52 ::: [rmdir addins/clearcase]
+16:27:52 ::: [rmdir addins/c++/i386_linux2]
+16:27:52 ::: [rmdir addins/c++]
+16:27:52 ::: [rmdir addins/ansic++/i386_linux2]
+16:27:52 ::: [rmdir addins/ansic++]
+16:27:52 ::: [rmdir addins/ada95/i386_linux2]
+16:27:52 ::: [rmdir addins/ada95]
+16:27:52 ::: [rmdir addins/ada83/i386_linux2]
+16:27:52 ::: [rmdir addins/ada83]
+16:27:52 ::: [rmdir addins]
+16:27:52 ::: [cp /boot/RosePatches/mkpatch/config_file .]

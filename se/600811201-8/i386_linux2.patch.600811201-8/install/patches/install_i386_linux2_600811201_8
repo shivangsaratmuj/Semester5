@@ -1,0 +1,2337 @@
+#!/bin/sh
+#**************************************************************************
+#@(#)Patch Technology $Revision: 1.66 $  $Date: 03/02/2006 13:28:43 $
+#@(#)Generated from makepatch $Revision: 1.206
+#@(#)(C) Copyright IBM Corporation. 1992, 2006. All Rights Reserved.
+#**************************************************************************
+#SOHT
+#
+#NAME
+#     install_i386_linux2_600811201_8 - Install Rose  7.0.0.0/Linux/Intel i386 patch.
+#
+#SYNOPSIS
+#     install_i386_linux2_600811201_8 [<options>]
+#
+#DESCRIPTION OF PATCH 600811201-8
+#      This patch is  intended to be installed over Rational Rose v 7.0.0.0
+#     
+#END_DESCRIPTION
+#
+#
+#OPTIONS
+#     -help     Show this usage message.
+#
+#     -ftp <ftp_command>
+#               Specify a command to use in place of the ftp command.
+#
+#     -server <local-gateway-server>
+#
+#     -user <local-user> <local-password>
+#               Specify a user and password to use for login to a local
+#               gateway machine.
+#
+#     -login '<login-command-to-local-gateway-to-reach-ftp.software.ibm.com>'
+#               Specify a command to the local gateway machine to use
+#               as the login to the remoter FTP server.
+#
+#     -commit   Commit this patch.  If you do this you cannot restore later.
+#               This will save disk space by removing the backup files.
+#
+#     -restore  Restore the release to the state prior to this patch.
+#
+#     -auto_commit
+#               Install and then commit this patch. This is used by
+#               post_install to install patches that IBM wants to also
+#               commit automatically while installing this product from
+#               release media.
+#
+#     NOTE: You cannot commit or restore a patch until you install it.
+#           You can do auto_commit to install the patch and commit it
+#           in a single invocation of this install.
+#
+#DEPENDENCIES
+#     For Apex patches, you must be in an Apex shell.
+#     Or you must run this command from a shell with ROSE set to the
+#     directory where Rose  7.0.0.0 is installed.
+#
+#ASSUMPTIONS
+#     Access to ftp.software.ibm.com or have already downloaded these files:
+     TARFILEZ="i386_linux2.patch.600811201-8.tar.Z"
+     INVENTORY="i386_linux2.patch.600811201-8.inventory"
+#
+#SEE ALSO
+#     tar(1), compress(1), ftp(1C)
+#
+#EOHT
+#**************************************************************************
+
+FILE=$0
+CMD="install_i386_linux2_600811201_8"
+CMD_DIR=`dirname $FILE`
+CMD_DIR=`(cd $CMD_DIR; pwd)`
+USER="${USER:-$LOGNAME}"
+PID="600811201-8"
+FTPDIR="/software/rational/Rose__UNIX/7.0.0.0/Linux/600811201-8"
+ARCH="i386_linux2"
+PRODUCT="rose"
+PROD_NAME="Rose "
+VERSION="7.0.0.0"
+ALT_VERSION=""
+LINKS="Links/roseunix.7.0.0.0"
+OS="Linux/Intel i386"
+VERSION_OS="7.0.0.0/Linux/Intel i386"
+PROD_VER="$PROD_NAME $VERSION"
+PROD_VER_OS="$PROD_NAME $VERSION_OS"
+HOME_VAR="ROSE"
+TARFILE="i386_linux2.patch.600811201-8.tar"
+TAR_SIZE="32019417"
+WINDOWS_TAR_Z="i386_linux2_patch_600811201-8_tar.Z"
+WINDOWS_INVENTORY=i386_linux2_patch_600811201-8.inventory
+FILE_COUNT="66"
+DEF_SERVER="ftp.software.ibm.com"
+PATCH_INFO_URL="ftp://ftp.software.ibm.com/software/rational/apex_patch_info/index.html"
+WORKD=`pwd`
+PRIOR="prior.$PID"
+NEW="new.$PID"
+DEL="delete.$PID"
+USE_APEXINIT="no"
+USE_ROSEINFO=""
+CONDITIONAL_INSTALL="no"
+INSTALL_IN=releases
+INSTALL_PATCHES="install/patches"
+PATCH_INV="$INSTALL_PATCHES/$INVENTORY"
+COMMIT="$INSTALL_PATCHES/i386_linux2.patch.$PID.committed"
+FILE_LIST="$TARFILEZ $INVENTORY"
+INSTALL_CMDS=""
+RUN_IN_APEX="false"
+PREREQ_MESG="This patch is intended for Rational Rose  for UNIX/Linux 7.0.0.0/Linux/Intel i386."
+PREREQ_FILE=addins/ada83/i386_linux2/libada83addin.so
+PREREQ_LOC=releases
+SERIES_ID=""
+RESTORE_NAME=restore_i386_linux2_600811201_8
+RESTORE_FILE=/tmp/$RESTORE_NAME
+PROTECT_BASE=""
+PROTECT_REL=""
+PROTECT=""
+DO_RESTORE=false
+DO_COMMIT=false
+DO_AUTO_COMMIT=false
+DATE_TIME_ID=
+FIX_TOO_LONG=no
+POST_INSTALL=post_install
+WINDOWS_RENAME=no
+APEX_MAIN=""
+FTP=ftp
+SERVER=$DEF_SERVER
+LOCAL_USER=
+LOCAL_PASSWORD=
+CHMOD=/tmp/$CMD.chmod
+INSTALL_DIR=`dirname $INSTALL_PATCHES`
+TAR_LOG=/tmp/$CMD.tarlog.$$
+TEMP=/tmp/$CMD.temp.$$
+show_cond_install=':'
+
+# Used by make_patch_info.sh
+LINK_LIST="%%LINK_LIST%%"
+
+os_name=`uname -s`
+case $os_name in
+AIX|OSF1 ) sym_link='-L' ;;
+*        ) sym_link='-h' ;;
+esac
+
+case $os_name in
+Linux ) uncompress='gzip -dc' ;;
+*     ) uncompress='uncompress -c' ;;
+esac
+
+# Break the date and time into date and time numbers
+# compare dates first, then time. This is done since the
+# date and time together cannot be handled by all sh/test commands.
+if [ -n "$DATE_TIME_ID" ]
+then
+    DATE_ID=`echo $DATE_TIME_ID | cut -c1-8`
+    TIME_ID=`echo $DATE_TIME_ID | cut -c9-14`
+fi
+
+#------------------------------------------------------------------------
+Usage() {
+#------------------------------------------------------------------------
+# Extract the text between #SOHT and #EOHT in this script
+
+    if [ $1 = 0 ]
+    then
+        sed -e '1,/^#SOHT/d'   -e '/^#EOHT/,$d' \
+            -e '/^#END_DESC/d' -e 's/^#//' $FILE | more
+        exit 0
+    else
+        echo
+        echo "Run '$CMD -h' for usage information."
+        echo
+        exit $1
+    fi
+}
+
+#------------------------------------------------------------------------
+list_protected_items() {
+#------------------------------------------------------------------------
+# Check each of the protected list variables.  Display the protected
+# items in each list.  The PROTECT_REL list is $HOME_DIR relative.
+# The PROTECT_BASE list is $prod_base relative.  Otherwise it is relative
+# to the the $INSTALL_IN directory.
+
+    for _pvar in PROTECT PROTECT_REL PROTECT_BASE
+    do
+        eval _pval=\$$_pvar
+        test -n "$_pval" || continue
+        for _protect in $_pval
+        do
+            case $_pvar in
+            PROTECT_BASE )
+                echo "$prod_base/$_protect"
+                ;;
+            PROTECT_REL )
+                echo "$HOME_DIR/$_protect"
+                ;;
+            PROTECT )
+                echo "$_protect"
+                ;;
+            esac
+        done
+    done
+    unset _pvar _pval _protect
+}
+
+#------------------------------------------------------------------------
+display_description() {
+#------------------------------------------------------------------------
+    (
+    cd $WORKD
+    sed -e "1,/^#DESCRIPTION/d" \
+        -e '/^#END_DESCRIPTION/,$d' \
+        -e 's/^#     //' \
+        $FILE
+    )
+}
+
+#------------------------------------------------------------------------
+display_inventory_only() {
+#------------------------------------------------------------------------
+
+    sed -e 's???g' ${1:-$WORKD/$INVENTORY}
+}
+
+#------------------------------------------------------------------------
+display_inventory_plus() {
+#------------------------------------------------------------------------
+
+    _opt=$1
+    display_inventory_only $2
+    case "$_opt" in
+    -r ) test -s $INSTALL_PATCHES/$RESTORE_NAME &&
+             cat $INSTALL_PATCHES/$RESTORE_NAME ;;
+    esac
+
+    test -n "$relative_series_file" && echo $relative_series_file
+
+    list_protected_items
+
+    echo END
+}
+
+#------------------------------------------------------------------------
+set_install_dir() {
+#------------------------------------------------------------------------
+
+    if [ "$PRODUCT" = apex_embedded ]
+    then
+        case $INSTALL_PATCHES in
+        common* )
+            # Use one of the real install directories since the
+            # common directory is only used for recording patches.
+            # This can be used later if any install commands need to
+            # be run.
+            for install_dir in $HOME_DIR/*/install
+            do
+                if [ -d $install_dir/$ARCH ]
+                then
+                    return
+                fi
+            done
+            ;;
+        * )
+            # If if is not a common patch, use the install directory
+            # that this patch is created for.
+            install_dir=$HOME_DIR/$INSTALL_DIR
+            ;;
+        esac
+
+        if [ -d $HOME_DIR/bin/common ]
+        then
+            PATH=$HOME_DIR/bin/common:$PATH
+            export PATH
+        elif [ -d $HOME_DIR/bin ]
+        then
+            PATH=$HOME_DIR/bin:$PATH
+            export PATH
+        fi
+    else
+        # All other products using this patch tool have an install directory
+        # in the product home directory.
+        install_dir=$HOME_DIR/install
+    fi
+}
+
+#------------------------------------------------------------------------
+set_home_dir1() {
+#------------------------------------------------------------------------
+# Get HOME_DIR1 from the command path.
+# This works if the command is run from inside the install directory.
+
+    HOME_DIR1=`dirname $FILE`
+    HOME_DIR1=`(cd $HOME_DIR1; pwd)`
+    case $HOME_DIR1 in
+    /tmp_mnt/* ) HOME_DIR1=`echo $HOME_DIR1 | sed -e 's?^/tmp_mnt??'` ;;
+    esac
+
+    case $HOME_DIR1 in
+    */install* )
+        ;;
+    * )
+        unset HOME_DIR1
+        return
+        ;;
+    esac
+
+    while [ "$HOME_DIR1" != / ]
+    do
+        case $HOME_DIR1 in
+        */install ) break ;;
+        esac
+        HOME_DIR1=`dirname $HOME_DIR1`
+    done
+
+    if [ "$HOME_DIR1" = / ]
+    then
+        unset HOME_DIR1
+        return
+    fi
+
+    HOME_DIR1=`dirname $HOME_DIR1`
+    if [ "$PRODUCT" = apex_embedded ]
+    then
+        HOME_DIR1=`dirname $HOME_DIR1`
+    fi
+
+    if [ $sym_link $HOME_DIR1/.Rational_Location ]
+    then
+        set -- `ls -ld $HOME_DIR1/.Rational_Location`
+        shift `expr $# - 1`
+        if [ -d $1/install ]
+        then
+            HOME_DIR1=$1
+        fi
+    fi
+}
+
+#------------------------------------------------------------------------
+mkdir_install_patches() {
+#------------------------------------------------------------------------
+
+    test -d $INSTALL_PATCHES && return
+
+    unset pdir
+    for idir in `(IFS=/ ; echo $INSTALL_PATCHES)`
+    do
+        if [ -n "$pdir" ]
+        then
+            pdir=$pdir/$idir
+        else
+            pdir=$idir
+        fi
+        if [ ! -d $pdir ]
+        then
+            mkdir $pdir
+        fi
+    done
+}
+
+#------------------------------------------------------------------------
+get_prod_base() {
+#------------------------------------------------------------------------
+
+    test -n "$prod_base" && return
+
+    # Get from APEX_BASE.
+    if [ -n "$APEX_BASE"  -a  -d "$APEX_BASE" ]
+    then
+        prod_base=$APEX_BASE
+        return
+    fi
+
+    # No luck, try .install_defaults...
+    eval `grep prod_base $install_dir/.install_defaults 2>/dev/null`
+    if [ -n "$prod_base"  -a  -d "$prod_base" ]
+    then
+        return
+    fi
+
+    # Try looking for it.  It should have a .Rational_Location file.
+    if [ $sym_link $HOME_DIR/../../base/.Rational_Location ]
+    then
+        set -- `/bin/ls -l $HOME_DIR/../../base/.Rational_Location`
+        shift `expr $# - 1`
+        prod_base=$1
+        if [ -d $prod_base ]
+        then
+            return
+        fi
+    fi
+
+    # In the relentless pursuit of excellence--ask installer where it is.
+    while true
+    do
+        echo
+        $ECHON "Enter full path to 'base' directory: $NOCR"
+        read prod_base
+        if [ -z "$prod_base" ]
+        then
+            echo "You must enter a value."
+            continue
+        fi
+
+        if [ -d "$prod_base" ]
+        then
+            return
+        fi
+        echo "$prod_base not found."
+        echo
+        $ECHON "Do you want to continue?  [no] $NOCR"
+        read yn
+        case "${yn:-no}" in
+            n*|N* ) exit ;;
+        esac
+    done
+}
+
+#------------------------------------------------------------------------
+dir_write() {
+#------------------------------------------------------------------------
+
+    dir=`dirname $file`
+    if [ -d $dir ]
+    then
+        if [ ! -w $dir ]
+        then
+            chmod u+w $dir
+            echo "chmod u-w $dir" >> $CHMOD
+        fi
+        return
+    fi
+
+    if [ ! -w . ]
+    then
+        echo
+        echo "You do not have write permissions on this directory:"
+        this_dir=`pwd`
+        /bin/ls -ld $this_dir
+        set -- `/bin/ls -ld $this_dir`
+        echo "You must run $CMD as $3 or add write permissions for"
+        echo "group and other."
+        echo
+        exit 3
+    fi
+
+    # Do not make the directory if it is a conditional install.
+    test -n "$cond" && return
+
+    set -- `echo $dir | sed -e 's?/? ?g'`
+    dir=.
+    while [ $# -gt 0 ]
+    do
+        dir=$dir/$1
+        if [ ! -d $dir ]
+        then
+            mkdir $dir
+            chmod g+w $dir
+        fi
+        shift
+    done
+}
+
+#------------------------------------------------------------------------
+dir_read() {
+#------------------------------------------------------------------------
+
+    if [ -s $CHMOD ]
+    then
+        sort -u -o $CHMOD $CHMOD
+        . $CHMOD
+        /bin/rm -f $CHMOD
+    fi
+}
+
+#------------------------------------------------------------------------
+it_exists() {
+#------------------------------------------------------------------------
+
+    test -f $1 -o -d $1 && return 0
+    return 1
+}
+
+#------------------------------------------------------------------------
+remove_it() {
+#------------------------------------------------------------------------
+
+    _remove=$1
+    /bin/rm -fr $_remove 2>/dev/null
+    if it_exists $_remove
+    then
+        chmod -R u+w $_remove 2>/dev/null
+        /bin/rm -fr $_remove 2>/dev/null
+    fi
+}
+
+#------------------------------------------------------------------------
+check_too_long() {
+#------------------------------------------------------------------------
+# Check for any TL/MV files. If found, source them to move 
+# tl file in the TL/ dir back to their original name.
+
+    if [ "$FIX_TOO_LONG" = yes ]
+    then
+        display_inventory_only |
+        while read dir cond cond_target
+        do
+            if [ -f $dir/TL/MV ]
+            then
+                (cd $dir
+                . TL/MV
+                /bin/rm -fr TL
+                )
+            fi
+        done
+    fi
+}
+
+#------------------------------------------------------------------------
+fix_Apex_Main_link() {
+#------------------------------------------------------------------------
+
+    if [ -z "$APEX_MAIN" ]
+    then
+        return 1
+    fi
+
+    apex_main_dir=`dirname $APEX_MAIN`
+    test -d $apex_main_dir || return 1
+    test -x $apex_main_dir/Apex_Main || return 1
+
+    (
+    cd $apex_main_dir
+    if $DO_RESTORE
+    then
+        remove_it Apex_Main.$PRIOR
+        remove_it Apex_Main
+        APEX_MAIN_NAME=`basename $APEX_MAIN`
+        ln $APEX_MAIN_NAME Apex_Main
+    elif $DO_COMMIT
+    then
+        remove_it Apex_Main.$PRIOR
+        echo "Removed: Apex_Main.$PRIOR"
+    else
+        remove_it Apex_Main.$PRIOR
+        /bin/mv Apex_Main Apex_Main.$PRIOR
+        APEX_MAIN_NAME=`basename $APEX_MAIN`
+        ln $APEX_MAIN_NAME Apex_Main
+    fi
+    )
+    return 0
+}
+
+#------------------------------------------------------------------------
+set_apex_home() {
+#------------------------------------------------------------------------
+
+    while true
+    do
+        echo
+        echo APEX_HOME is not set.
+        echo
+        $ECHON "Enter APEX_HOME directory: $NOCR"
+        read APEX_HOME
+        if [ -f $APEX_HOME/.apex_version ]
+        then
+            break
+        else
+            echo $APEX_HOME/.apex_version not found.
+            echo $APEX_HOME is not an APEX_HOME directory.
+        fi
+    done
+}
+
+#------------------------------------------------------------------------
+conditional_test() {
+#------------------------------------------------------------------------
+
+    case "$cond" in
+    -d|+d )
+        if [ -z "$cond_target" ]
+        then
+            cond_target=`dirname $file`
+        fi
+        ;;
+    * )
+        cond_target=${cond_target:-$file}
+        ;;
+    esac
+
+    case "$cond" in
+    -dt) test_cond="date_and_time_check $cond_target" ;;
+    -d ) test_cond="test -d $cond_target -o -d $cond_target.$PRIOR" ;;
+    -f ) test_cond="test -f $cond_target -o -f $cond_target.$PRIOR" ;;
+    -s ) test_cond="test -s $cond_target -o -s $cond_target.$PRIOR" ;;
+    -x ) test_cond="test -x $cond_target -o -x $cond_target.$PRIOR" ;;
+    +d ) test_cond="test ! -d $cond_target" ;;
+    +f ) test_cond="test ! -f $cond_target" ;;
+    +s ) test_cond="test ! -s $cond_target" ;;
+    +x ) test_cond="test ! -x $cond_target" ;;
+    esac
+
+    # If the condition fails, continue to the next file.
+    eval $test_cond
+    return $?
+}
+
+#------------------------------------------------------------------------
+commit_check() {
+#------------------------------------------------------------------------
+
+    test -f $HOME_DIR/$COMMIT || return
+    echo
+    echo "Patch $PID has already been installed and committed."
+    echo
+
+    $DO_AUTO_COMMIT && exit 0
+
+    $ECHON "Reinstall patch $PID? [no] $NOCR"
+    read resp
+    case ${resp:-no} in
+    y*|Y* )
+        /bin/rm -f $HOME_DIR/$COMMIT
+        return
+        ;;
+    esac
+    exit 0
+}
+
+#------------------------------------------------------------------------
+set_series_files() {
+#------------------------------------------------------------------------
+
+    set -- $SERIES_ID
+    ID=$1
+    D2=$2
+    T2=$3
+    if [ "$INSTALL_IN" = base ]
+    then
+        relative_series_file=$LINKS/$INSTALL_PATCHES/series.$ID
+    else
+        relative_series_file=$INSTALL_PATCHES/series.$ID
+    fi
+    series_file=$HOME_DIR/$INSTALL_PATCHES/series.$ID
+    new_series_file=$series_file.$NEW
+    prior_series_file=$series_file.$PRIOR
+}
+
+#------------------------------------------------------------------------
+series_check() {
+#------------------------------------------------------------------------
+
+    if [ -z "$SERIES_ID" ]
+    then
+        unset series_file
+        return
+    fi
+
+    # Okay to install if this is the first patch of the series.
+    set_series_files
+    test -f $series_file || return
+
+    set -- `cat $series_file`
+    D1=$2
+    T1=$3
+    P1=$4
+
+    if [ "$D2" -gt "$D1" ]
+    then
+        # Okay to install.
+        # This patch is newer than the same patch in the series.
+        return
+    elif [ "$D2" -eq "$D1" ]
+    then
+        if [ "$T2" -ge "$T1" ]
+        then
+            # Okay to install.
+            # This patch is newer than the same patch in the series.
+            return
+        fi
+    fi
+
+    # At this point, there already exists a patch for this series
+    # and it is newer than the patch being installed.
+    echo
+    echo "Patch $PID does not need to be installed."
+    if [ "$PID" = "$P1" ]
+    then
+        echo "A newer copy of patch $PID has already been installed."
+    else
+        echo "Patch $P1 supersedes it and it has already been installed."
+    fi
+    echo
+    exit 0
+}
+
+#------------------------------------------------------------------------
+check_series_patch() {
+#------------------------------------------------------------------------
+
+    case $req_pid_prod in
+    apex )
+        if [ -z "$APEX_HOME" ]
+        then
+            if [ -s $install_dir/.install_defaults ]
+            then
+                eval `grep "^APEX_HOME=" $install_dir/.install_defaults`
+            fi
+            if [ -z "$APEX_HOME" ]
+            then
+                set_apex_home
+            fi
+        fi
+        req_series_file=$APEX_HOME/install/patches/series.$req_series_id
+        ;;
+    * )
+        if [ "$PRODUCT" = apex_embedded ]
+        then
+            # Check the common install area first.
+            req_series_file=$HOME_DIR/common/install/patches/series.$req_series_id
+            if [ ! -f $req_series_file ]
+            then
+               req_series_file=$HOME_DIR/$INSTALL_PATCHES/series.$req_series_id
+            fi
+        else
+            req_series_file=$HOME_DIR/$INSTALL_PATCHES/series.$req_series_id
+        fi
+        ;;
+    esac
+
+    if [ -f $req_series_file ]
+    then
+        # No more checking needed if a creation date was not specified.
+        test "$req_series_date" = any && return 0
+
+        # Also check the creation date for the required series.
+        set -- `cat $req_series_file`
+        case $2 in
+        [2-9]??????[0-9] )
+            test "$2" -ge "$req_series_date" && return 0
+            ;;
+        esac
+        req_series_not_installed=false
+    else
+        req_series_not_installed=true
+    fi
+
+    echo
+    echo "Patch $PID requires that the $req_prod_ver '$req_series_id'"
+    echo "series patch be installed.  You can get the latest patch from"
+    echo "IBM's FTP server at this location:"
+    echo
+    echo "  $PATCH_INFO_URL"
+    echo
+
+    if $req_series_not_installed
+    then
+        echo "You must install the '$req_series_id' patch before installing"
+        echo "patch $PID."
+    else
+       # It is installed but this patch requires a newer one.
+        echo "The '$req_series_id' series patch is older than the one"
+        echo "required for this patch.  You must install the latest one before"
+        echo "installing patch $PID."
+    fi
+    echo
+    return 1
+}
+
+#------------------------------------------------------------------------
+prereq_check() {
+#------------------------------------------------------------------------
+
+    if [ -z "$PREREQ_FILE" ]
+    then
+        return
+    fi
+
+    if [ "$PREREQ_LOC" = base ]
+    then
+        check_file=$prod_base/$PREREQ_FILE
+    else
+        check_file=$HOME_DIR/$PREREQ_FILE
+    fi
+
+    test -f $check_file -o -d $check_file && return
+
+    if $DO_AUTO_COMMIT
+    then
+        echo "
+Note: Patch $PID is not required for this installation
+      of $PROD_VER"
+        exit 0
+    fi
+
+    echo "
+Patch $PID requires that this file be installed--it is not:
+    $check_file
+
+Your installation of $PROD_VER does not match this patch.
+$PREREQ_MESG
+    "
+    exit 1
+}
+
+#------------------------------------------------------------------------
+check_specific_pid() {
+#------------------------------------------------------------------------
+
+    if [ "$1" = apex_embedded ]
+    then
+        for ipdir in $HOME_DIR/*/install/patches
+        do
+            if [ -f $ipdir/$rpid ]
+            then
+                return 0
+            fi
+        done
+        return 1
+    fi
+
+    if [ "$1" = apex ]
+    then
+        test -f $APEX_HOME/install/patches/$rpid && return 0
+    else
+        test -f $HOME_DIR/install/patches/$rpid && return 0
+    fi
+    return 1
+}
+
+#------------------------------------------------------------------------
+req_pid_check() {
+#------------------------------------------------------------------------
+
+    req_pid_prod=$1
+    req_pid_var=$2
+    apatch="$3"
+    req_pid_n=0
+    unset req_pid_mesgs
+    eval REQ_PID=\"\$${req_pid_var}1\"
+    if [ -z "$REQ_PID" ]
+    then
+        return 0
+    fi
+
+    req_pid_installed=true
+    first_pid_list=true
+    while true
+    do
+        req_pid_n=`expr $req_pid_n + 1`
+        eval req_pid_list=\"\$${req_pid_var}$req_pid_n\"
+        if [ -z "$req_pid_list" ]
+        then
+            break
+        else
+            req_pid_installed=true
+        fi
+
+        first_pid=true
+        set -- $req_pid_list
+        if [ $req_pid_var = APEX_REQ_PID ]
+        then
+            req_prod_ver="apex $1"
+            shift
+        else
+            req_prod_ver="$PROD_NAME $VERSION"
+        fi
+
+        while [ $# -gt 0 ]
+        do
+            rpid=$1
+            shift
+            case "$rpid" in
+            [1-9]????????-[0-9] )
+                if check_specific_pid "$req_pid_prod"
+                then
+                    continue
+                else
+                    req_pid_installed=false
+                fi
+                ;;
+            * )
+                req_series_id=$rpid
+                req_series_date=$1
+                case "$2" in
+                /patch_info/* )
+                    req_series_on_ftp=$2/$rpid
+                    shift 2
+                    ;;
+                * )
+                    shift 1
+                    ;;
+                esac
+                if check_series_patch
+                then
+                    continue
+                else
+                    rpid="series '$rpid'"
+                    req_pid_installed=false
+                fi
+                ;;
+            esac
+
+            if $first_pid
+            then
+                pidn=1
+                pid_list=$rpid
+                if $first_pid_list
+                then
+                    req_pid_mesg="This ${apatch}patch: $rpid"
+                    req_pid_indent="        "
+                else
+                    req_pid_mesg="this ${apatch}patch: $rpid"
+                    req_pid_indent="     "
+                fi
+                first_pid=false
+            else
+                pidn=`expr $pidn + 1`
+                pid_list="$pid_list AND $rpid"
+                if $first_pid_list
+                then
+                    req_pid_mesg="These $pidn ${apatch}patches: $pid_list"
+                    req_pid_indent="   "
+                else
+                    req_pid_mesg="these $pidn ${apatch}patches: $pid_list"
+                    req_pid_indent=""
+                fi
+            fi
+        done
+
+        # Only need to check one list if every patch in the list
+        # is already installed.
+        $req_pid_installed && return 0
+
+        if $first_pid_list
+        then
+            req_pid_mesgs="${req_pid_indent}$req_pid_mesg"
+            first_pid_list=false
+        else
+            req_pid_mesgs="$req_pid_mesgs
+${req_pid_indent}Or $req_pid_mesg"
+        fi
+    done
+    $req_pid_installed && return 0
+    return 1
+}
+
+
+#------------------------------------------------------------------------
+check_req_pids() {
+#------------------------------------------------------------------------
+
+    REQ_PID_missing=false
+    APEX_REQ_PID_missing=false
+    REQ_PID_exit=':'
+
+    if req_pid_check $PRODUCT REQ_PID ""
+    then
+        unset REQ_PID_mesgs
+    else
+        REQ_PID_mesgs="$req_pid_mesgs"
+        REQ_PID_exit=exit
+        REQ_PID_missing=true
+    fi
+
+    # Check for Apex specific patches.
+    if req_pid_check apex APEX_REQ_PID "Apex "
+    then
+        unset APEX_REQ_PID_mesgs
+    else
+        APEX_REQ_PID_mesgs="$req_pid_mesgs"
+        REQ_PID_exit=exit
+        APEX_REQ_PID_missing=true
+    fi
+
+    if $REQ_PID_missing
+    then
+        echo "
+Before you can install patch $PID, these patches are required:
+$REQ_PID_mesgs
+        "
+    fi
+
+    if $APEX_REQ_PID_missing
+    then
+        echo "
+Before you can install patch $PID, these Apex patches are required:
+$APEX_REQ_PID_mesgs
+        "
+    fi
+
+    $REQ_PID_exit 1
+}
+
+#------------------------------------------------------------------------
+do_commit_patch() {
+#------------------------------------------------------------------------
+
+    if [ "$INSTALL_IN" = base ]
+    then
+        PATCH_INV=$HOME_DIR/$PATCH_INV
+        COMMIT=$HOME_DIR/$COMMIT
+        get_prod_base
+        cd $prod_base
+    fi
+    
+    echo
+    echo "Committing patch $PID..."
+
+    if [ -n "$SERIES_ID" ]
+    then
+        set_series_files
+    fi
+
+    N=0
+    display_inventory_plus -c $PATCH_INV |
+    while read file cond cond_target
+    do
+        if [ $file = END ]
+        then
+            commit_del_objects
+            if fix_Apex_Main_link
+            then
+                N=`expr $N + 1`
+            fi
+            case $N in
+            0 ) echo "There were no items to commit for patch $PID." ;;
+            1 ) echo "1 item was committed for patch $PID." ;;
+            * ) echo "$N items were committed for patch $PID." ;;
+            esac
+            break
+        fi
+
+        dir_write
+
+        if it_exists $file.$PRIOR
+        then
+            N=`expr $N + 1`
+            remove_it $file.$PRIOR
+            echo "Removed: $file.$PRIOR"
+        fi
+
+        if it_exists $file.$NEW
+        then
+            N=`expr $N + 1`
+            remove_it $file.$NEW
+            echo "Removed: $file.$NEW"
+        fi
+    done
+
+    /bin/mv $PATCH_INV $COMMIT
+    /bin/rm -f $HOME_DIR/$INSTALL_PATCHES/$RESTORE_NAME
+    dir_read
+}
+
+#------------------------------------------------------------------------
+do_restore_patch() {
+#------------------------------------------------------------------------
+
+    restore_exit=$1
+    cd $HOME_DIR
+    if [ ! -f $PATCH_INV ]
+    then
+        if [ -f $COMMIT ]
+        then
+            echo
+            echo "Patch $PID cannot be restored--it has been committed."
+            echo
+            exit 0
+        else
+            unset PATCH_INV
+            if [ -f $CMD_DIR/$INVENTORY ]
+            then
+                PATCH_INV=$CMD_DIR/$INVENTORY
+            else
+                echo Cannot find $INVENTORY file.
+                echo
+                $ECHON "Enter directory $INVENTORY file is in: $NOCR"
+                read INV_DIR
+                case $INV_DIR in 
+                "" )
+                    ;;
+                * )
+                    if [ -f $INV_DIR/$INVENTORY ]
+                    then
+                        PATCH_INV=$INV_DIR/$INVENTORY
+                    elif [ -f $INV_DIR ]
+                    then
+                        name=`basename $INV_DIR`
+                        if [ "$name" = "$INVENTORY" ]
+                        then
+                            PATCH_INV=$INV_DIR
+                        else
+                            echo "$INV_DIR exists,
+but it is not the inventory file used by $CMD."
+                        fi
+                    else
+                        echo There is no $INVENTORY file in $INV_DIR.
+                    fi
+                    ;;
+                esac
+            fi
+
+            if [ -z "$PATCH_INV" ]
+            then
+                echo
+                echo "Patch $PID cannot be restored until it is installed."
+                echo
+                exit 6
+            fi
+        fi
+    fi
+
+    echo
+    echo "Restoring $PROD_VER to a state prior to patch $PID..."
+    restore_status=none
+    restore_error=0
+
+    if [ "$INSTALL_IN" = base ]
+    then
+        PATCH_INV=$HOME_DIR/$PATCH_INV
+        get_prod_base
+        cd $prod_base
+    fi
+
+    if [ -n "$SERIES_ID" ]
+    then
+        set_series_files
+    fi
+
+    display_inventory_plus -r $PATCH_INV |
+    while read file cond cond_target
+    do
+        if [ $file = END ]
+        then
+            restore_del_objects
+
+            case $restore_error in
+            0 )
+                ;;
+            1 )
+                echo "An error occurred restoring a backup file."
+                exit 5
+                ;;
+            * )
+                echo "Errors occurred restoring $restore_error backup files."
+                exit 5
+                ;;
+            esac
+
+            if [ $restore_status = none ]
+            then
+                echo
+                echo "This patch has already been restored."
+                echo
+            else
+                cd $HOME_DIR
+                fix_Apex_Main_link
+                /bin/rm -f $INSTALL_PATCHES/$PID \
+                           $INSTALL_PATCHES/*.$PID.inventory
+                echo "$PROD_VER restored to a state prior to $PID patch."
+            fi
+            break
+        fi
+
+        dir_write
+
+        if it_exists $file.$PRIOR
+        then
+            # The backup file exists, restore it.
+            if it_exists $file
+            then
+                /bin/mv $file $file.$$
+            fi
+
+            if /bin/mv $file.$PRIOR $file
+            then
+                remove_it $file.$$
+                echo "Restored: $file"
+                restore_status=okay
+            else
+                if it_exists $file.$$
+                then
+                    /bin/mv $file.$$ $file
+                fi
+                restore_error=`expr $restore_error + 1`
+            fi
+        fi
+
+        if it_exists $file.$NEW
+        then
+            # It was a new file, remove it.
+            remove_it $file
+            remove_it $file.$NEW
+            echo "New file: $file (removed)"
+            restore_status=okay
+        fi
+    done
+
+    dir_read
+    exit $restore_exit
+}
+
+#------------------------------------------------------------------------
+check_file_name() {
+#------------------------------------------------------------------------
+# Check if a patch file was renamed by a Windows application.
+
+    FILE_TYPE="$1"
+    WINDOWS_NAME=$2
+    UNIX_NAME=$3
+
+    test -f $UNIX_NAME && return
+
+    if [ -f $WINDOWS_NAME ]
+    then
+        if [ "$WINDOWS_RENAME" = no ]
+        then
+            echo "
+This patch was downloaded using a Windows application that renames files.
+That application renamed the $FILE_TYPE to $WINDOWS_NAME.
+Now renaming it back to it's original name:
+   $WINDOWS_NAME -> $UNIX_NAME
+"
+        else
+            echo "
+The Windows application renamed the $FILE_TYPE to $WINDOWS_NAME too.
+Now renaming it back to it's original name:
+   $WINDOWS_NAME -> $UNIX_NAME
+"
+
+        fi
+
+        /bin/mv $WINDOWS_NAME $UNIX_NAME
+        WINDOWS_RENAME=yes
+    fi
+}
+
+#------------------------------------------------------------------------
+read_arch_defaults() {
+#------------------------------------------------------------------------
+
+    if [ -f $ARCH/install_defaults ]
+    then
+        . $ARCH/install_defaults
+        return
+    fi
+
+    for arch_defaults in `/bin/ls -tr1 */install_defaults 2>/dev/null`
+    do
+        if [ -f $arch_defaults ]
+        then
+            . $arch_defaults
+            return
+        fi
+    done
+}
+
+#------------------------------------------------------------------------
+run_install_cmds() {
+#------------------------------------------------------------------------
+
+    test -n "$install_dir" || set_install_dir
+    POST_INSTALL=${POST_INSTALL:-post_install}
+
+    cd $install_dir
+    for icmd in $INSTALL_CMDS
+    do
+        if [ ! -x ./$icmd  ]
+        then
+             continue
+        fi
+
+        # If command is post_install, but this install is being run
+        # by post_install, then post_install does not need to be
+        # run again.  To check this, see if either pre_patch or
+        # POST_PATCH is set to started.
+        if [ $icmd = $POST_INSTALL ]
+        then
+            read_arch_defaults
+            if [ "$POST_PATCH" = STARTED  -o "$pre_patch" = started ]
+            then
+                # Post_install is running this patch from the post_patch
+                # or pre_patch file. Don't run post_install twice.
+                continue
+            fi
+        fi
+
+        # If command is a link to install, then run with the remote
+        # option to avoid duplicate entries in the install.log file.
+        unset icmd_opt
+        if [ $sym_link $icmd ]
+        then
+            set -- `/bin/ls -l $icmd`
+            shift `expr $# - 1`
+            if [ "$1" = install ]
+            then
+                icmd_opt=remote
+            fi
+        fi
+
+        echo
+        echo "This patch requires that the $icmd command be run:"
+        echo "  $install_dir/$icmd"
+        ./$icmd $icmd_opt
+
+        if [ $? -ne 0 ]
+        then
+            echo "$icmd failed"
+            echo
+            $ECHON "Continue with $CMD?  [no] $NOCR"
+            read resp
+            case $resp in
+            y*|Y* ) continue ;;
+            * ) exit 1 ;;
+            esac
+        fi
+    done
+    :
+}
+
+#------------------------------------------------------------------------
+date_and_time_check() {
+#------------------------------------------------------------------------
+
+    dt_dir=$1
+
+    # If the directory does not exist or the date and time id is not set,
+    # install the patch element.
+    test -d $dt_dir/. || return 0
+    test -n "$DATE_TIME_ID" || return 0
+
+    # Directory exists and id set.
+    
+    # Check if the id on this directory is greater than or equal to this
+    # patch date and time id.  If it is, the patch does not need to be
+    # installed.
+    for _ver_file in $dt_dir/.version*
+    do
+        test -s $_ver_file || continue
+
+        _date_time=`cat $_ver_file`
+        _date_time=${_date_time:-00000000000000}
+        _date=`echo $_date_time | cut -c1-8`
+        if [ "$_date" -lt "$DATE_ID" ]
+        then
+            # What is installed is out of date.
+            # Need to install patch element.
+            return 0
+        fi
+
+        if [ "$_date" -gt "$DATE_ID" ]
+        then
+            # What is installed is up-to-date or the latest.
+            $show_cond_install "   $file (latest version installed)"
+            return 1
+        fi
+
+        _time=`echo $_date_time | cut -c9-14`
+        if [ "$_time" -ge "$TIME_ID" ]
+        then
+            # What is installed is up-to-date or the latest.
+            $show_cond_install "   $file (latest version installed)"
+            return 1
+        fi
+        # What is installed is out of date.
+        # Need to install patch element.
+        return 0
+    done
+    # The version file does not exist.  Need to install.
+    return 0
+}
+
+#------------------------------------------------------------------------
+save_init_files() {
+#------------------------------------------------------------------------
+    test "$PRODUCT" = apex_embedded || return
+
+    # Save the init file for Apex Embedded.
+    # Restore after patch has been installed.
+    for init in apexrt apexvw apexlx apex_embedded
+    do
+        init_backup=$HOME_DIR/$init.init
+        if [ -d $HOME_DIR/bin/common ]
+        then
+            init_file=$HOME_DIR/bin/common/$init.init
+        else
+            init_file=$HOME_DIR/bin/$init.init
+        fi
+        if [ -f $init_file  -a ! -f $init_backup ]
+        then
+            cp -p $init_file $init_backup
+        fi
+    done
+}
+
+#------------------------------------------------------------------------
+restore_init_files() {
+#------------------------------------------------------------------------
+    test "$PRODUCT" = apex_embedded || return
+
+    # Restore previously saved init files.
+    for init in apexrt apexvw apexlx apex_embedded
+    do
+        init_backup=$HOME_DIR/$init.init
+        if [ -d $HOME_DIR/bin/common ]
+        then
+            init_file=$HOME_DIR/bin/common/$init.init
+        else
+            init_file=$HOME_DIR/bin/$init.init
+        fi
+        if [ ! -f $init_file  -a  -f $init_backup ]
+        then
+            cp -p $init_backup $init_file
+        fi
+        /bin/rm -f $init_backup
+    done
+}
+
+#------------------------------------------------------------------------
+save_del_objects() {
+#------------------------------------------------------------------------
+
+    del_qty=1
+    object="$DELETE_OBJECT1"
+    while [ -n "$object" ]
+    do
+        if it_exists $object
+        then
+            if it_exists $object.$DEL
+            then
+                # The backup marker exists, so remove the object.
+                remove_it $object
+            else
+                if /bin/mv $object $object.$DEL
+                then
+                    echo "Backup: $object"
+                    N=`expr $N + 1`
+                else
+                    echo "Error occurred making backup--aborting."
+                    touch /tmp/$CMD.abort
+                    break
+                fi
+            fi
+        fi
+        del_qty=`expr $del_qty + 1`
+        eval object=\"\$DELETE_OBJECT$del_qty\"
+    done
+}
+
+#------------------------------------------------------------------------
+delete_del_objects() {
+#------------------------------------------------------------------------
+
+    del_qty=1
+    object="$DELETE_OBJECT1"
+    while [ -n "$object" ]
+    do
+        if [ $del_qty -eq 1 ]
+        then
+            echo
+            echo "Deleting objects as part of patch $PID..."
+        fi
+        case $object in
+        *.rel|*.wrk )
+            echo "  deleting view: $object"
+            ;;
+        *.ss )
+            echo "  deleting subsystem: $object"
+            ;;
+        * )
+            if [ $sym_link $object ]
+            then
+                echo "  deleting sym link: $object"
+            elif [ -d $object ]
+            then
+                echo "  deleting directory: $object"
+            else
+                echo "  deleting file: $object"
+            fi
+            ;;
+        esac
+        remove_it $object
+        del_qty=`expr $del_qty + 1`
+        eval object=\"\$DELETE_OBJECT$del_qty\"
+    done
+}
+
+#------------------------------------------------------------------------
+commit_del_objects() {
+#------------------------------------------------------------------------
+
+    del_qty=1
+    object="$DELETE_OBJECT1"
+    while [ -n "$object" ]
+    do
+        if it_exists $object.$DEL
+        then
+            N=`expr $N + 1`
+            remove_it $object.$DEL
+            echo "Removed: $object.$DEL"
+        fi
+        del_qty=`expr $del_qty + 1`
+        eval object=\"\$DELETE_OBJECT$del_qty\"
+    done
+}
+
+#------------------------------------------------------------------------
+restore_del_objects() {
+#------------------------------------------------------------------------
+
+    del_qty=1
+    object="$DELETE_OBJECT1"
+    while [ -n "$object" ]
+    do
+        if it_exists $object.$DEL
+        then
+            # The backup object exists, restore it.
+            if /bin/mv $object.$DEL $object
+            then
+                echo "Restored: $object"
+                restore_status=okay
+            else
+                restore_error=`expr $restore_error + 1`
+            fi
+        fi
+        del_qty=`expr $del_qty + 1`
+        eval object=\"\$DELETE_OBJECT$del_qty\"
+    done
+}
+
+#------------------------------------------------------------------------
+cleanup_tar_cmd() {
+#------------------------------------------------------------------------
+
+    cat $TAR_LOG
+    /bin/rm -f $TAR_LOG
+    echo "Tar command failed."
+    do_restore_patch 9
+}
+
+#------------------------------------------------------------------------
+check_tar_cmd() {
+#------------------------------------------------------------------------
+# The tar command returned a non-zero status indicating a problem.
+# Some problems have to do with owner or group settings.  This is known
+# to happen on HP-UX and Compaq Tru64 machines with the tar p option.
+# This type of error can be ignored.  If all of the files and directories
+# were installed, assume success.  Otherwise cleanup and exit.
+
+    if [ "$1" = all ]
+    then
+        display_inventory_only |
+        while read file cond cond_target
+        do
+            if [ ! -f $file -a ! -d $file ]
+            then
+                cleanup_tar_cmd
+                exit 9
+            fi
+        done
+    else # last
+        if [ ! -f $file -a ! -d $file ]
+        then
+            cleanup_tar_cmd
+            exit 9
+        fi
+    fi
+}
+
+#------------------------------------------------------------------------
+# MAIN
+#------------------------------------------------------------------------
+# Get command line options, set flags.
+#------------------------------------------------------------------------
+while [ $# -gt 0 ]
+do
+    case $1 in
+        -auto_commit ) DO_AUTO_COMMIT=true ;;
+        -c* ) DO_COMMIT=true ;;
+        -f* ) FTP=$2 ; shift ;;
+        -h* ) Usage 0 ;;
+        -i* ) run_install_cmds ; exit 0 ;;
+        -l* ) LOCAL_COMMAND="$2" ; shift ;;
+        -r* ) DO_RESTORE=true ;;
+        -s* ) SERVER=$2 ; shift ;;
+        -u* ) LOCAL_USER=$2 ; LOCAL_PASSWORD="$3" ; shift 2 ;;
+    esac
+    shift
+done
+
+if $DO_COMMIT
+then
+    if $DO_RESTORE
+    then
+        echo
+        echo "You cannot both commit and restore the patch."
+        exit 7
+    fi
+fi
+
+#------------------------------------------------------------------------
+# Determine which echo command to use.
+#------------------------------------------------------------------------
+if [ "`echo -n`" = '-n' ]
+then
+    ECHON=echo
+    NOCR='\c'
+else
+    ECHON='echo -n'
+    NOCR=
+fi
+
+#------------------------------------------------------------------------
+# Check vars needed to install patch are set.
+#------------------------------------------------------------------------
+set_home_dir1
+eval HOME_DIR2=\$$HOME_VAR
+if [ -n "$HOME_DIR1" -a -n "$HOME_DIR2" ]
+then
+    if $DO_AUTO_COMMIT
+    then
+        # This patch is being run from the install directory, so we must
+        # use the home dir extracted from set_home_dir1 function.
+        # This way, we do not even ask the installer which one to use.
+        HOME_DIR=${HOME_DIR2:-$HOME_DIR1}
+    elif [ "$HOME_DIR1" = "$HOME_DIR2" ]
+    then
+        HOME_DIR=$HOME_DIR1
+    else
+        # They are not the same. Ask the installer which
+        # one to use.
+        echo "
+By default, you are installing patch $PID here:
+----> 1) $HOME_DIR1
+
+However, $PROD_NAME environment variable $HOME_VAR
+is set to this:
+      2) $HOME_DIR2
+"
+        $ECHON "Select the directory to install into (1 or 2):  [1] $NOCR"
+        read inst_choice
+        case ${inst_choice:-1} in
+        2 ) HOME_DIR=$HOME_DIR2 ;;
+        * ) HOME_DIR=$HOME_DIR1 ;;
+        esac
+    fi
+else
+    # Use the directory set by the install location first.
+    # If not set, use the one from the product's HOME_VAR setting.
+    HOME_DIR=${HOME_DIR1:-$HOME_DIR2}
+fi
+
+if [ -z "$HOME_DIR" ]
+then
+    echo
+    echo "$HOME_VAR not set."
+    echo "Enter the directory where $PROD_VER is installed."
+    while true
+    do
+        echo
+        $ECHON "Enter $HOME_VAR directory: $NOCR"
+        read HOME_DIR
+        if [ -d $HOME_DIR ]
+        then
+            break
+        fi
+        echo "$HOME_DIR not found."
+    done
+fi
+eval $HOME_VAR=$HOME_DIR
+
+if [ ! -d $HOME_DIR ]
+then
+    echo
+    echo "$HOME_DIR ($HOME_VAR) not found."
+    Usage 1
+fi
+export HOME_DIR
+
+if [ "$HOME_VAR" = APEX_HOME ]
+then
+    if [ -z "$APEX_PROD_VERSION" ]
+    then
+        if [ -f $HOME_DIR/.apex_version ]
+        then
+            APEX_PROD_VERSION=`cat $HOME_DIR/.apex_version`
+        else
+            echo $HOME_DIR/.apex_version not found.
+        fi
+    fi
+
+    if [ -z "$APEX_PROD_VERSION" ]
+    then
+        echo
+        echo "The Apex version could not be determinded."
+        echo "You should run this command from an Apex shell."
+        Usage 1
+    fi
+
+    case $VERSION in
+    *[b-z] )
+        if [ -f $HOME_DIR/.patch_level ]
+        then
+            pl=`cat $HOME_DIR/.patch_level`
+            APEX_PROD_VERSION=${APEX_PROD_VERSION}$pl
+        fi
+        ;;
+    esac
+
+    if [ "$APEX_PROD_VERSION" != "$VERSION" ]
+    then
+        if [ "$ALT_VERSION" != "$APEX_PROD_VERSION" ]
+        then
+            echo "
+You are running $PROD_NAME $APEX_PROD_VERSION, not $VERSION."
+            if [ -n "$ALT_VERSION" ]
+            then
+                echo "
+Patch $PID is intended for $PROD_NAME/$OS,
+$VERSION or $ALT_VERSION only."
+            else
+                echo "
+Patch $PID is intended for $PROD_VER_OS only."
+            fi
+            Usage 1
+        fi
+    fi
+else
+    if [ -n "$ALT_VERSION" ]
+    then
+        (cd $HOME_DIR; pwd) |
+            egrep "$PRODUCT.$VERSION|$PRODUCT.$ALT_VERSION" >/dev/null
+    else
+        (cd $HOME_DIR; pwd) | grep $PRODUCT.$VERSION >/dev/null
+    fi
+
+    if [ $? -ne 0 ]
+    then
+        echo
+        echo "Warning: $HOME_DIR"
+        echo "         does not have $PRODUCT.$VERSION in the path."
+        echo
+        $ECHON "Continue with $CMD?  [no] $NOCR"
+        read resp
+        case ${resp:-no} in
+            n*|N* ) exit 0 ;;
+        esac
+    fi
+fi
+
+set_install_dir
+
+if [ "$ARCH" != any  -a  -z "$PREREQ_FILE" ]
+then
+    if [ -d $HOME_DIR/$ARCH -o -d $install_dir/$ARCH ]
+    then
+        :
+    else
+        echo "
+Patch $PID is specifically built for:
+  $PROD_VER_OS
+It does not appear to be installed.  Neither directory was found:
+  $HOME_DIR/$ARCH
+  $install_dir/$ARCH
+"
+        exit 1
+    fi
+fi
+
+#------------------------------------------------------------------------
+# Restore to a state prior to this patch if the -restore option is used.
+#------------------------------------------------------------------------
+if $DO_RESTORE
+then
+    do_restore_patch 0
+fi
+
+#------------------------------------------------------------------------
+# Commit this patch if the -commit or -auto_commit option is used.
+#------------------------------------------------------------------------
+if $DO_COMMIT
+then
+    cd $HOME_DIR
+    if [ -f $COMMIT ]
+    then
+        echo
+        echo "Patch $PID has already been committed."
+        echo
+        exit 0
+    fi
+
+    if [ ! -f $PATCH_INV ]
+    then
+        echo
+        echo "Patch $PID cannot be committed until it is installed."
+        echo
+        exit 6
+    fi
+
+    do_commit_patch
+    exit 0
+fi
+
+#------------------------------------------------------------------------
+# Work out of the directory where the install script resides.
+#------------------------------------------------------------------------
+if [ ! -f $CMD ]
+then
+    echo "You must run the install script in the directory where it resides."
+    exit 4
+fi
+
+#------------------------------------------------------------------------
+# Check prerequisites and that the USER is the original installer.
+#------------------------------------------------------------------------
+if [ "$INSTALL_IN" = base ]
+then
+    get_prod_base
+    CHECK_DIR=$prod_base
+else
+    CHECK_DIR=$HOME_DIR
+    if [ -n "$PROTECT_BASE" ]
+    then
+        get_prod_base
+    fi
+fi
+
+commit_check
+series_check
+prereq_check
+check_req_pids
+
+chmod u+w $CHECK_DIR
+if [ $? -ne 0 ]
+then
+    echo
+    echo "You are not the original installer of $PROD_NAME:"
+    /bin/ls -ld $CHECK_DIR
+    set -- `/bin/ls -ld $CHECK_DIR`
+    echo "You must run $CMD as $3."
+    echo
+    exit 3
+fi
+
+#------------------------------------------------------------------------
+# Check if the tar archive and inventory file. See if either was renamed
+# by a Windows application.  If the .Z gets lower-case, will upper-case it.
+#------------------------------------------------------------------------
+TARFILE_SMALLZ=`echo $TARFILEZ | sed -e 's?\.Z$?.z?'`
+check_file_name "tar archive"    $WINDOWS_TAR_Z      $TARFILEZ
+check_file_name "tar archive"    $TARFILE_SMALLZ     $TARFILEZ
+check_file_name "inventory file" $WINDOWS_INVENTORY  $INVENTORY
+
+#------------------------------------------------------------------------
+# Download the remaining files, if not already done.
+#------------------------------------------------------------------------
+FTP_GET=
+get_list=
+need_ftp=no
+for ftpfile in $FILE_LIST
+do
+    if [ ! -f $ftpfile ]
+    then
+        need_ftp=yes
+        get_list="$get_list
+    $ftpfile"
+
+        FTP_GET="$FTP_GET
+!echo Getting $ftpfile from $SERVER...
+get $ftpfile
+!ls -l $ftpfile"
+
+    fi
+done
+
+if [ "$need_ftp" = yes ]
+then
+    echo
+    if [ "$SERVER" = "$DEF_SERVER" ]
+    then
+        echo "Will download these files from $SERVER:"
+    else
+        echo "Will download these files from $DEF_SERVER through $SERVER:"
+    fi
+    echo "$get_list"
+    echo
+
+    FTP_COMMANDS="open $SERVER
+user ${LOCAL_USER:-ftp} ${LOCAL_PASSWORD:-$USER@}
+$LOCAL_COMMAND
+cd $FTPDIR
+bin
+$FTP_GET
+quit"
+
+    # Show the FTP command.
+    echo "$FTP -n"
+    echo "$FTP_COMMANDS" | sed -e '/^$/d' -e '/^\!/d' -e 's?^?ftp> '?
+    echo
+
+    # Run the FTP command.
+    echo "$FTP_COMMANDS" | $FTP -n
+fi
+
+got_all_files=yes
+for ftpfile in $FILE_LIST
+do
+    if [ ! -f $ftpfile ]
+    then
+        echo "Failed to get $ftpfile"
+        got_all_files=no
+    fi
+done
+
+if [ "$got_all_files" = no ]
+then
+    DOMAIN=`domainname`
+    echo "
+If your site uses a firewall that requires you to do something
+special to get to FTP sites on the Internet, you can pass this
+information into this command.
+
+This command uses 'ftp' as the command to get to '$DEF_SERVER'.
+You can change the 'ftp' command, the initial server and get
+through your gateway using special options:
+
+    -ftp    <ftp_command>
+    -server <local-gateway-server>
+    -user   <local-user> <local-password>
+    -login '<login-command-to-local-gateway-to-reach-$DEF_SERVER>'
+
+For example, if you have a machine called 'gateway' and you need to use
+a command called 'iftp' to get to it, and you need to login as
+$USER with the password 'secret-pwd' and issue a command like this:
+
+    user ftp@$DEF_SERVER $USER.$DOMAIN
+
+to reach the IBM FTP server, run this command like this:
+
+    ./$CMD -ftp iftp -server gateway \\
+        -user $USER 'secret-pwd' \\
+        -login 'user ftp@$DEF_SERVER $USER.$DOMAIN'
+"
+    exit  2
+fi
+
+#------------------------------------------------------------------------
+# Check tar file size
+#------------------------------------------------------------------------
+set -- `/bin/ls -lL $TARFILEZ`
+if [ $# -eq 9 ]
+then
+    actual_size=$5
+else
+    actual_size=$4
+fi
+
+if [ "$actual_size" -ne "$TAR_SIZE" ]
+then
+    echo "
+The expected size of the tar file ($TARFILEZ) is
+$TAR_SIZE bytes.  The actual size of the tar file
+is $actual_size.  Try downloading the tar file from
+this location again:
+    ftp://${DEF_SERVER}$FTPDIR
+
+The complete URL for the tar file is:
+    ftp://${DEF_SERVER}$FTPDIR/$TARFILEZ
+
+First remove the tar file, download it again and then rerun this command.
+    "
+    exit 8
+fi
+
+#------------------------------------------------------------------------
+# Need to to work out of product home directory or base directory.
+#------------------------------------------------------------------------
+if [ "$INSTALL_IN" = base ]
+then
+    cd $prod_base
+
+    # Link this release in base, if not already done.
+    if [ ! -d Links ]
+    then
+        mkdir Links
+    fi
+
+    if [ ! $sym_link $LINKS ]
+    then
+        ln -s $HOME_DIR $LINKS
+    fi
+else
+    cd $HOME_DIR
+fi
+
+#------------------------------------------------------------------------
+# Save originals before installing patch.
+#------------------------------------------------------------------------
+echo
+echo "Creating backup if necessary..."
+save_init_files
+/bin/rm -f $TEMP
+N=0
+display_inventory_plus -b $WORKD/$INVENTORY |
+while read file cond cond_target
+do
+    if [ "$file" = END ]
+    then
+        save_del_objects
+        case $N in
+        0 ) echo "No backup needed." ;;
+        1 ) echo "Backup of 1 item created." ;;
+        * ) echo "Backup of $N items created." ;;
+        esac
+        break
+    fi
+
+    if [ -n "$cond" ]
+    then
+        conditional_test || continue
+    fi
+
+    dir_write
+
+    if it_exists $file
+    then
+        if it_exists $file.$NEW
+        then
+            # The backup marker file already exists, just remove the file.
+            # Otherwise tar will complain.
+            remove_it $file
+        elif it_exists $file.$PRIOR
+        then
+            # The backup already exists, just remove the file.
+            remove_it $file
+        else
+            if /bin/mv $file $file.$PRIOR
+            then
+                echo "Backup: $file"
+                N=`expr $N + 1`
+            else
+                echo "Error occurred making backup file--aborting."
+                touch /tmp/$CMD.abort
+                break
+            fi
+        fi
+    else
+        dir=`dirname $file`
+        if [ -d $dir ]
+        then
+            touch $file.$NEW
+        else
+            _dir=$dir
+            while [ "$_dir" != . ]
+            do
+                test -d $_dir && break
+                echo $_dir >> $RESTORE_FILE
+                _dir=`dirname $_dir`
+            done
+        fi
+    fi
+done
+
+# For any items that are protected, make a copy of it back to its original
+# name so that this patch can then modify it.
+for protect in `list_protected_items`
+do
+    if [ -d $protect.$PRIOR ]
+    then
+        if mkdir $protect
+        then
+            # Copy the directory back to its original name using tar.
+            (cd $protect.$PRIOR; tar -cf - .) |
+            (cd $protect       ; tar -xf -  )
+        fi
+    elif [ -f $protect.$PRIOR ]
+    then
+        /bin/cp $protect.$PRIOR $protect
+    fi
+done
+unset protect
+
+if [ -f /tmp/$CMD.abort ]
+then
+    /bin/rm -f /tmp/$CMD.abort $TEMP
+    exit 5
+fi
+
+#------------------------------------------------------------------------
+# Delete any objects first and then
+# install files from compressed tar archive.
+#------------------------------------------------------------------------
+delete_del_objects
+echo
+echo "Installing files out of $TARFILEZ..."
+if [ "$FILE_COUNT" -gt 50 ]
+then
+    tar_opt='xpf'
+    if [ "$CONDITIONAL_INSTALL" = yes ]
+    then
+        show_cond_install=echo
+    else
+        awk '{printf("   %s\n", $1)}' $WORKD/$INVENTORY
+    fi
+else
+    tar_opt='xpvf'
+fi
+
+case $TARFILEZ in
+*.Z )
+    tar_cmd="$uncompress $WORKD/$TARFILEZ | tar -$tar_opt -"
+    ;;
+*.gz )
+    tar_cmd="gzip -dc $WORKD/$TARFILEZ | tar -$tar_opt -"
+    ;;
+* )
+    tar_cmd="tar -$tar_opt $WORKD/$TARFILEZ"
+    ;;
+esac
+
+if [ "$CONDITIONAL_INSTALL" = yes ]
+then
+    trap '/bin/rm -f $TEMP; exit 0' 0
+    trap '/bin/rm -f $TEMP; exit 1' 1 2 3 4 15
+    /bin/rm -f $TEMP
+    display_inventory_only |
+    while read file cond cond_target
+    do
+        if [ -n "$cond" ]
+        then
+            if conditional_test
+            then
+                echo $file >> $TEMP
+            fi
+        else
+            echo $file >> $TEMP
+        fi
+    done
+
+    if [ -s $TEMP ]
+    then
+        for file in `cat $TEMP`
+        do
+            $show_cond_install "   $file"
+            eval $tar_cmd $file 2>$TAR_LOG
+            if [ $? -ne 0 ]
+            then
+                check_tar_cmd last || exit 9
+            fi
+
+            if it_exists $file.$NEW
+            then
+                continue
+            elif it_exists $file.$PRIOR
+            then
+                continue
+            fi
+            touch $file.$NEW
+        done
+    fi
+else
+    eval $tar_cmd 2>$TAR_LOG
+    if [ $? -ne 0 ]
+    then
+        check_tar_cmd all || exit 9
+    fi
+fi
+
+/bin/rm -f $TAR_LOG
+
+check_too_long
+fix_Apex_Main_link
+restore_init_files
+
+dir_read
+
+if [ "$INSTALL_IN" = base ]
+then
+    # Return to release directory to complete the install.
+    cd $HOME_DIR
+fi
+
+#------------------------------------------------------------------------
+# Record patch information in the install directory.
+# Extract the description from this install script.
+#------------------------------------------------------------------------
+mkdir_install_patches
+display_description > $INSTALL_PATCHES/$PID
+if [ -n "$SERIES_ID" ]
+then
+    echo "$SERIES_ID $PID" > $series_file
+fi
+
+#------------------------------------------------------------------------
+# If there is a product description file for this patch, run post_install.
+#------------------------------------------------------------------------
+if [ -f $INSTALL_DIR/any/prod_desc.$PID ]
+then
+    # This is a platform independent patch that needs to run post_install.
+    # Copy the prod_desc file to the platform directories first.
+    (cd $INSTALL_DIR
+    for pd in */prod_desc
+    do
+        arch_os=`dirname $pd`
+        cp any/prod_desc.$PID $arch_os/prod_desc.$PID
+    done
+    )
+fi
+
+if [ -f $INSTALL_DIR/$ARCH/prod_desc.$PID ]
+then
+    POST_INSTALL=${POST_INSTALL:-post_install}
+    echo
+    echo "This patch requires that $POST_INSTALL be run again."
+    echo "Running $POST_INSTALL now..."
+    (
+        cd $INSTALL_DIR
+        ./$POST_INSTALL -patch $PID
+    )
+fi
+
+if [ -n "$INSTALL_CMDS" ]
+then
+    if ${RUN_IN_APEX:-false}
+    then
+        if [ -z "$APEX_HOME" ]
+        then
+            echo
+            echo Need to run these commands from an Apex shell:
+            echo "  $INSTALL_CMDS"
+            set_apex_home
+        fi
+        (cd $CMD_DIR; $APEX_HOME/bin/apexinit -batch sh $CMD -i) || exit 1
+    else
+        (run_install_cmds) || exit 1
+    fi
+fi
+
+#------------------------------------------------------------------------
+# Cleanup tar file.
+#------------------------------------------------------------------------
+if [ ! -f $WORKD/.norm_tar ]
+then
+    if $DO_AUTO_COMMIT
+    then
+        /bin/rm -f $WORKD/$TARFILEZ
+    else
+        if [ -w $WORKD ]
+        then
+            echo
+            echo "The $TARFILEZ file is no longer needed."
+            $ECHON "Remove $TARFILEZ?  [yes] $NOCR"
+            read resp
+            case $resp in
+            y*|Y*|"" )
+                if /bin/rm -f $WORKD/$TARFILEZ
+                then
+                    echo "Okay, the tar file has been removed."
+                fi
+                ;;
+            esac
+        fi
+    fi
+fi
+
+#------------------------------------------------------------------------
+# Save inventory file and install script.
+#------------------------------------------------------------------------
+if $DO_AUTO_COMMIT
+then
+    # If -auto_commit specified, save files, do the commit now and exit.
+    /bin/mv $WORKD/$INVENTORY $INSTALL_PATCHES
+    /bin/mv $WORKD/$CMD $INSTALL_PATCHES
+    /bin/rm -f $RESTORE_FILE
+    chmod 775 $INSTALL_PATCHES/$CMD
+    do_commit_patch
+    exit 0
+else
+    echo
+    /bin/cp $WORKD/$INVENTORY $INSTALL_PATCHES
+    echo "Inventory file copied to \$$HOME_VAR/$INSTALL_PATCHES."
+    /bin/cp $WORKD/$CMD $INSTALL_PATCHES
+    echo "Install script copied to \$$HOME_VAR/$INSTALL_PATCHES."
+    chmod 775 $INSTALL_PATCHES/$CMD
+    if [ -s $RESTORE_FILE ]
+    then
+        sort -ur $RESTORE_FILE > $INSTALL_PATCHES/$RESTORE_NAME
+        chmod 664 $INSTALL_PATCHES/$RESTORE_NAME
+        cat $INSTALL_PATCHES/$RESTORE_NAME |
+        while read dir
+        do
+            touch $dir.$NEW
+        done
+    fi
+fi
+
+#------------------------------------------------------------------------
+# Inform user.
+#------------------------------------------------------------------------
+echo
+set -- `date`
+echo "PATCH: $PID  Installed by $USER on $2 $3, $6 at `date +%H:%M`"
+
+if [ "$USE_APEXINIT" = yes ]
+then
+    echo "
+You can run apexinit to view all patches installed using this
+type of installation procedure:
+
+  \$APEX_HOME/bin/apexinit -info"
+
+elif [ "$USE_ROSEINFO" = yes ]
+then
+    echo "
+You can run the Rose startup script to view all patches installed using this
+type of installation procedure:
+
+  \$ROSE/bin/rose -info"
+fi
+
+
+echo "
+You can run this install script to restore $PROD_VER to its state prior
+to installing patch $PID:
+
+  \$$HOME_VAR/$INSTALL_PATCHES/$CMD -restore
+
+You can run this install script to commit patch $PID.
+If you do this, you cannot restore later.
+
+  \$$HOME_VAR/$INSTALL_PATCHES/$CMD -commit
+
+Commiting a patch will save disk space by removing the backup files.
+"
+exit 0
+
+
+

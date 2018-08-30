@@ -2,7 +2,7 @@
 
 #include<stdlib.h>
 #include<stdio.h>
- 
+
 // Merges two subarrays of arr[].
 // First subarray is arr[l..m]
 // Second subarray is arr[m+1..r]
@@ -11,16 +11,16 @@ void merge(int arr[], int l, int m, int r)
     int i, j, k;
     int n1 = m - l + 1;
     int n2 =  r - m;
- 
+
     /* create temp arrays */
     int L[n1], R[n2];
- 
+
     /* Copy data to temp arrays L[] and R[] */
     for (i = 0; i < n1; i++)
         L[i] = arr[l + i];
     for (j = 0; j < n2; j++)
         R[j] = arr[m + 1+ j];
- 
+
     /* Merge the temp arrays back into arr[l..r]*/
     i = 0; // Initial index of first subarray
     j = 0; // Initial index of second subarray
@@ -39,8 +39,8 @@ void merge(int arr[], int l, int m, int r)
         }
         k++;
     }
- 
-    /* Copy the remaining elements of L[], if there
+
+   /* Copy the remaining elements of L[], if there
        are any */
     while (i < n1)
     {
@@ -48,7 +48,7 @@ void merge(int arr[], int l, int m, int r)
         i++;
         k++;
     }
- 
+
     /* Copy the remaining elements of R[], if there
        are any */
     while (j < n2)
@@ -58,7 +58,7 @@ void merge(int arr[], int l, int m, int r)
         k++;
     }
 }
- 
+
 /* l is for left index and r is right index of the
    sub-array of arr to be sorted */
 void mergeSort(int arr[], int l, int r)
@@ -76,7 +76,7 @@ void mergeSort(int arr[], int l, int r)
         merge(arr, l, m, r);
     }
 }
- 
+
 /* UTILITY FUNCTIONS */
 /* Function to print an array */
 void printArray(int A[], int size)
@@ -86,7 +86,7 @@ void printArray(int A[], int size)
         printf("%d ", A[i]);
     printf("\n");
 }
- 
+
 /* Driver program to test above functions */
 int main()
 {
@@ -104,12 +104,12 @@ int main()
         /* code */
         scanf("%d", &arr[i]);
     }
- 
+
     printf("Given array is \n");
     printArray(arr, n);
- 
+
     mergeSort(arr, 0, n - 1);
- 
+
     printf("\nSorted array is \n");
     printArray(arr, n);
     return 0;

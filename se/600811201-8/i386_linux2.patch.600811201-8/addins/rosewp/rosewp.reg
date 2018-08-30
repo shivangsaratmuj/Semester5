@@ -1,0 +1,27 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\CLSID\{E33B9DA6-0560-11D2-AA43-852C2AB5C86C}]
+@="RoseWebPub.RWPInterface"
+ 
+[HKEY_CLASSES_ROOT\CLSID\{E33B9DA6-0560-11D2-AA43-852C2AB5C86C}\InProcServer32]
+@="%%INSTALL_DIR%%/addins/rosewp/%%PLATFORM%%/librwebutil.%%DLL_EXT%%"
+ 
+[HKEY_CLASSES_ROOT\CLSID\{E33B9DA6-0560-11D2-AA43-852C2AB5C86C}\ProgID]
+@="RoseWebPub.RWPInterface"
+
+[HKEY_CLASSES_ROOT\RoseWebPub.RWPInterface]
+@="RoseWebPub.RWPInterface"
+ 
+[HKEY_CLASSES_ROOT\RoseWebPub.RWPInterface\CLSID]
+@="{E33B9DA6-0560-11D2-AA43-852C2AB5C86C}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Rose Web Publisher]
+"Active"="Yes"
+"Company"="IBM Corporation"
+"Copyright"="Copyright 1997-2008 IBM Corp."
+"HelpFileName"="webpub"
+"InstallDir"="%%INSTALL_DIR%%/addins/rosewp"
+"LanguageAddIn"="No"
+"MenuFile"="rosewp.mnu"
+"OLEServer"="RoseWebPub.RWPInterface"
+"Version"="2006,0,810,3123"

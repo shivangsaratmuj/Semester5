@@ -1,0 +1,83 @@
+# All comments with a leading '#' and a '+' are used to make the patch description file.
+# These first 2 lines do not get included in the patch description (no + after the #)
+#+  This patch is  intended to be installed over Rational Rose v 7.0.0.0
+#+
+
+
+
+
+
+#  Blank lines are ignored.  The ROOT is used to find the patch files you want to put in the patch.
+ROOT /root/rose_linux_fp4_patch
+
+# To find each file, will prefix ROOT value to the file name
+#File to put in patch:                       Destination dir:                       Permission
+addins/ada83/i386_linux2/libada83addin.so	addins/ada83/i386_linux2	755
+addins/ada83/i386_linux2/ada83addin.rsb	addins/ada83/i386_linux2	755
+addins/ada95/i386_linux2/libada95addin.so	addins/ada95/i386_linux2	755
+addins/ada95/i386_linux2/ada95addin.rsb	addins/ada95/i386_linux2	755
+addins/ansic++/i386_linux2/libcppdll.so	addins/ansic++/i386_linux2	755
+addins/ansic++/i386_linux2/cppdll.rsb	addins/ansic++/i386_linux2	755
+addins/c++/i386_linux2/libcppaddin.so	addins/c++/i386_linux2	755
+addins/c++/i386_linux2/cppaddin.rsb	addins/c++/i386_linux2	755
+addins/clearcase/i386_linux2/libclearcase_addin.so	addins/clearcase/i386_linux2	755
+addins/clearcase/i386_linux2/clearcase_addin.rsb	addins/clearcase/i386_linux2	755
+addins/corba/i386_linux2/libcorba_addin.so	addins/corba/i386_linux2	755
+addins/corba/i386_linux2/corba_addin.rsb	addins/corba/i386_linux2	755
+addins/cppcvt/i386_linux2/libcppcvtk2.so	addins/cppcvt/i386_linux2	755
+addins/cppcvt/i386_linux2/cppcvtk2.rsb	addins/cppcvt/i386_linux2	755
+addins/cppevent/i386_linux2/libcppevent.so	addins/cppevent/i386_linux2	755
+addins/cppevent/i386_linux2/cppevent.rsb	addins/cppevent/i386_linux2	755
+addins/dtd/i386_linux2/libdtd_addin.so	addins/dtd/i386_linux2	755
+addins/dtd/i386_linux2/dtd_addin.rsb	addins/dtd/i386_linux2	755
+addins/java/i386_linux2/librjava_addin.so	addins/java/i386_linux2	755
+addins/java/i386_linux2/rjava_addin.rsb	addins/java/i386_linux2	755
+addins/java/java2rei/i386_linux2/libjava2rei.so addins/java/java2rei/i386_linux2        755
+addins/java/java2rei/i386_linux2/java2rei.rsb	addins/java/java2rei/i386_linux2	755
+addins/mdlint/i386_linux2/compare.rsb	addins/mdlint/i386_linux2	755
+addins/mdlint/i386_linux2/merge.rsb	addins/mdlint/i386_linux2	755
+addins/mdlint/i386_linux2/modelint	addins/mdlint/i386_linux2	755
+addins/mdlint/i386_linux2/modelint.rsb	addins/mdlint/i386_linux2	755
+addins/mdlint/i386_linux2/xcompare.rsb	addins/mdlint/i386_linux2	755
+addins/mdlint/i386_linux2/xmerge.rsb	addins/mdlint/i386_linux2	755
+addins/rosewp/i386_linux2/librwebutil.so	addins/rosewp/i386_linux2	755
+addins/rosewp/i386_linux2/rwebutil.rsb	addins/rosewp/i386_linux2	755
+i386_linux2/bin/rjavarelay	i386_linux2/bin	755
+i386_linux2/bin/rjavarelay.rsb	i386_linux2/bin	755
+i386_linux2/bin/rose_exe	i386_linux2/bin	755
+i386_linux2/bin/rose_exe.rsb	i386_linux2/bin	755
+i386_linux2/bin/Rose_Message_Server	i386_linux2/bin	755
+i386_linux2/bin/rosemsg	i386_linux2/bin	755
+i386_linux2/lib/libRForteReceiver.so	i386_linux2/lib	755
+i386_linux2/lib/libRJBuilderReceiver.so	i386_linux2/lib	755
+i386_linux2/lib/RForteReceiver.rsb	i386_linux2/lib	755
+i386_linux2/lib/RJBuilderReceiver.rsb	i386_linux2/lib	755
+
+addins/ada95/rose_ada95.cx	addins/ada95 755
+addins/ada95/ada95.reg	addins/ada95 755
+addins/ada95/roseada95.pty	addins/ada95 755
+addins/ada83/ada83.reg	addins/ada83 755
+addins/ansic++/ansic++.reg	addins/ansic++	755
+addins/ansic++/cpp.pty	addins/ansic++	755
+addins/cppcvt/cppcvt.reg	addins/cppcvt	755
+addins/cppevent/cppevent.reg	addins/cppevent	755
+addins/corba/corba.reg	addins/corba	755
+addins/java/java.reg	addins/java 755
+addins/c++/rosecpp.cx	addins/c++ 755
+addins/c++/rosecpp.pty	addins/c++ 755
+addins/c++/c++.reg	addins/c++ 755
+addins/mdlint/mdlint.reg	addins/mdlint	755
+addins/rosewp/rosewp.reg	addins/rosewp	755
+addins/rosewp/files/frames.html	addins/rosewp/files 755
+addins/rosewp/files/root.html	addins/rosewp/files 755
+addins/rosewp/files/browser.jar	addins/rosewp/files 755
+addins/rosewp/files/contents.html        addins/rosewp/files 755
+addins/dtd/dtd.reg	addins/dtd	755
+mw/lib-linux_optimized/gdiuser32.rsb	mw/lib-linux_optimized 755
+mw/lib-linux_optimized/kernel32.rsb	mw/lib-linux_optimized 755
+mw/lib-linux_optimized/libgdiuser32.so	mw/lib-linux_optimized 755
+mw/lib-linux_optimized/libkernel32.so	mw/lib-linux_optimized 755
+mw/lib-linux_optimized/libpslib.so	mw/lib-linux_optimized 755
+
+help/scripto.hlp help 755
+

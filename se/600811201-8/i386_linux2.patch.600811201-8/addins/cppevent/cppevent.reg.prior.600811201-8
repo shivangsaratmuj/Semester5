@@ -1,0 +1,27 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\CLSID\{BB5508B4-AC79-11D3-B15A-00104B9BEBBC}]
+@="rose.cppevent"
+
+[HKEY_CLASSES_ROOT\CLSID\{BB5508B4-AC79-11D3-B15A-00104B9BEBBC}\InProcServer32]
+@="%%INSTALL_DIR%%/addins/cppevent/%%PLATFORM%%/libcppevent.%%DLL_EXT%%"
+
+[HKEY_CLASSES_ROOT\CLSID\{BB5508B4-AC79-11D3-B15A-00104B9BEBBC}\ProgID]
+@="rose.cppevent"
+
+[HKEY_CLASSES_ROOT\rose.cppevent]
+@="rose.cppevent"
+
+[HKEY_CLASSES_ROOT\rose.cppevent\CLSID]
+@="{BB5508B4-AC79-11D3-B15A-00104B9BEBBC}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\ANSI C++ Event Watcher]
+"Active"="Required"
+"Company"="IBM Corporation"
+"Copyright"="Copyright 2003-2008 IBM Corp."
+"InstallDir"="%%INSTALL_DIR%%/addins/cppevent"
+"LanguageAddIn"="No"
+"MenuFile"="cppevent.mnu"
+"OLEServer"="rose.cppevent"
+"Version"="2006,0,810,1623"
+

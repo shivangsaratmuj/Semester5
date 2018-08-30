@@ -1,0 +1,53 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\CLSID\{48213314-71D9-11D3-A420-00104B9BE470}]
+@="rose.cplusplus.30"
+
+[HKEY_CLASSES_ROOT\CLSID\{48213314-71D9-11D3-A420-00104B9BE470}\InProcServer32]
+@="%%INSTALL_DIR%%/addins/ansic++/%%PLATFORM%%/libcppdll.%%DLL_EXT%%"
+
+[HKEY_CLASSES_ROOT\CLSID\{48213314-71D9-11D3-A420-00104B9BE470}\ProgID]
+@="rose.cplusplus.30"
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\ANSI C++]
+"Active"="Yes"
+"Company"="IBM Corporation"
+"Copyright"="Copyright 1999-2008 IBM Corp."
+"InstallDir"="%%INSTALL_DIR%%/addins/ansic++"
+"FundamentalTypes"="bool;char;byte;short;int;long;float;double"
+"HelpFileName"="ansi"
+"LanguageAddIn"="Yes"
+"MenuFile"="cpp.mnu"
+"OLEServer"="rose.cplusplus.30"
+"PropertyFile"="cpp.pty"
+"StereotypeCfgFile"="cppstereotypes.ini"
+"Version"="2006,0,810,1623"
+"ToolDisplayName"="ANSI C++"
+"ToolName"="Cplusplus"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\ANSI C++\Events]
+"OnActivate"="Interface"
+"OnDeactivate"="Interface"
+"OnSelectedContextMenuItem"="Interface"
+"OnBrowseBody"="Interface"
+"OnBrowseHeader"="Interface"
+"OnGenerateCode"="Interface"
+"OnEnableContextmenuItems"="Interface"
+"OnNewModel"="Interface"
+"OnOpenModel"="Interface"
+
+[HKEY_CURRENT_USER\Software\Rational Software\rose\Addins\ANSI C++\Custom Settings\User Preferences]
+"InitializeStaticConstMembersInHFile"="0"
+
+[HKEY_CURRENT_USER\Software\Rational Software\rose\Addins\ANSI C++\Custom Settings\User Preferences]
+"PreserveCommentStyle"="0"
+
+[HKEY_CLASSES_ROOT\rose.cplusplus.30]
+@="rose.cplusplus.30"
+
+[HKEY_CLASSES_ROOT\rose.cplusplus.30\CLSID]
+@="{48213314-71D9-11D3-A420-00104B9BE470}"
+
+
+

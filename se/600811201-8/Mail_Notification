@@ -1,0 +1,8 @@
+PRODUCT: Rational Rose  for UNIX/Linux
+VERSION: 7.0.0.0
+PLATFORM: Linux/Intel i386
+PATCH NUMBER: 600811201-8
+URL:  ftp://ftp.software.ibm.com/software/rational/Rose__UNIX/7.0.0.0/Linux/600811201-8
+
+ This patch is  intended to be installed over Rational Rose v 7.0.0.0
+

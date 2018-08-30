@@ -1,0 +1,33 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\CLSID\{66C014DA-0CA1-11D4-BCA3-005056E6D0FC}]
+@="rose.cppcvt"
+
+[HKEY_CLASSES_ROOT\CLSID\{66C014DA-0CA1-11D4-BCA3-005056E6D0FC}\InProcServer32]
+@="%%INSTALL_DIR%%/addins/cppcvt/%%PLATFORM%%/libcppcvtk2.%%DLL_EXT%%"
+
+[HKEY_CLASSES_ROOT\CLSID\{66C014DA-0CA1-11D4-BCA3-005056E6D0FC}\ProgID]
+@="rose.cppcvt"
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\ANSI Converter]
+"Active"="Yes"
+"Company"="IBM Corporation"
+"Copyright"="Copyright 2003-2008 IBM Corp."
+"InstallDir"="%%INSTALL_DIR%%/addins/cppcvt"
+"LanguageAddIn"="No"
+"MenuFile"="cppcvt.mnu"
+"OLEServer"="rose.cppcvt"
+"ToolName"="ANSIConvert"
+"Version"="2006,0,810,1623"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\ANSI Converter\Events]
+"OnActivate"="Interface"
+"OnDeactivate"="Interface"
+
+[HKEY_CLASSES_ROOT\rose.cppcvt]
+@="rose.cppcvt"
+
+[HKEY_CLASSES_ROOT\rose.cppcvt\CLSID]
+@="{66C014DA-0CA1-11D4-BCA3-005056E6D0FC}"
+

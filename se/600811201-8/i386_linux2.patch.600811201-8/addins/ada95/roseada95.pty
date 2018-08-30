@@ -1,0 +1,1855 @@
+
+
+#
+# Copyright (C) 1997,2003 IBM.  All Rights Reserved.
+# Rose/Ada Version 2.8.1
+#
+
+
+
+
+
+
+(object Petal version 42)
+
+(list Attribute_Set
+    #
+    #   The following are project property sets.
+    #
+    (object Attribute
+        tool	"Ada95"
+        name	"roseId"
+        value	"753117540"      #@ !rose (Fri Nov 12 16:19:00 1993)
+    )
+    (object Attribute
+        tool	"Ada95"
+        name    "propertyId"
+        value   "838326200"    #@ !properties (Thu Jul 25 22:23:20 1996)
+    )
+    (object Attribute
+        tool	"Ada95"
+        name    "default__Project"
+        value   (list Attribute_Set
+            (object Attribute
+                tool	"Ada95"
+                name    "SpecFileExtension"
+                value   "1.ada"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "SpecFileBackupExtension"
+                value   "1.ad~"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "SpecFileTemporaryExtension"
+                value   "1.ad#"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "BodyFileExtension"
+                value   "2.ada"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "BodyFileBackupExtension"
+                value   "2.ad~"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "BodyFileTemporaryExtension"
+                value   "2.ad#"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "CreateMissingDirectories"
+                value   TRUE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "UseColonNotation"
+                value   TRUE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateBodies"
+                value   TRUE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessorOperations"
+                value   TRUE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateStandardOperations"
+                value   TRUE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "DefaultCodeBody"
+                value   "[statement]"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ImplicitParameter"
+                value   TRUE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "CommentWidth"
+                value   60
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "StopOnError"
+                value   FALSE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ErrorLimit"
+                value   30
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "UseFileName"
+                value   FALSE
+            )
+		(object Attribute
+	    	    tool    "Ada95"
+	    	    name    "FileNameFormat"
+	 	    value   "128vx_b"
+	      )
+            (object Attribute
+                tool	"Ada95"
+                name    "Directory"
+
+
+                value   "$ROSEADA95_SOURCE"
+
+            )
+        )
+    )
+
+    #
+    #   The following are Class property sets.
+    #
+    (object Attribute
+        tool	"Ada95"
+        name    "default__Class"
+        value   (list Attribute_Set
+	    (object Attribute
+		tool	"Ada95"
+		name	"CodeName"
+		value	""
+	    )
+
+         (object Attribute
+         	tool	"Ada95"
+	 	name    "SeparateDefaultConstructor"
+	        value   FALSE
+	 )
+         (object Attribute
+         	tool	"Ada95"
+	 	name    "SeparateCopyConstructor"
+	        value   FALSE
+	 )
+         (object Attribute
+         	tool	"Ada95"
+	 	name    "SeparateDestructor"
+	        value   FALSE
+	 )	 
+
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeName"
+                value   "Object"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeVisibility"
+                value   ("TypeVisibilitySet" 43) #@Private
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeImplementation"
+                value   ("TypeImplementationSet" 208) #@Tagged
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "IncompleteType"
+                value   ("IncompleteTypeSet" 1)
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "IndefiniteType"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeControl"
+                value   ("TypeControlSet" 225)  #@None
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeControlName"
+                value   "Controlled_${type}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeControlVisibility"
+                value   ("TypeVisibilitySet" 43) #@Private
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeDefinition"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordImplementation"
+                value   ("RecordImplementationSet" 209) #@SingleType
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordKindPackageName"
+                value   "${class}_Record_Kinds"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "IsLimited"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "IsSubtype"
+                value   FALSE
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessType"
+                value   ("GenerateAccessTypeSet" 230) #@Auto
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AccessTypeName"
+                value   "Handle"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AccessTypeVisibility"
+                value   ("TypeVisibilitySet" 45) #@Public
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AccessTypeDefinition"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AccessClassWide"
+                value   TRUE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "MaybeAliased"
+                value   FALSE
+            )
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "ParameterizedImplementation"
+                value   ("ParameterizedImplementationSet" 11) #@Generic
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ParentClassName"
+                value   "Superclass"
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "EnumerationLiteralPrefix"
+                value   "A_"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordFieldPrefix"
+                value   "The_"
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "ArrayOfTypeName"
+                value   "Array_Of_${type}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AccessArrayOfTypeName"
+                value   "Access_Array_Of_${type}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ArrayOfAccessTypeName"
+                value   "Array_Of_${access_type}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AccessArrayOfAccessTypeName"
+                value   "Access_Array_Of_${access_type}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ArrayIndexDefinition"
+                value   "Positive range <>"
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessorOperations"
+                value   TRUE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateStandardOperations"
+                value   TRUE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ImplicitParameter"
+                value   TRUE
+            )
+            (object Attribute
+                tool	"Ada95"
+
+
+
+                name    "ImplicitParameterName"
+
+                value   "This"
+            )
+
+
+
+
+
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateDefaultConstructor"
+                value   ("SubprogramKindSet" 199)  #@FunctionDecl
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "DefaultConstructorName"
+                value   "Create"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineDefaultConstructor"
+                value   FALSE
+            )
+
+
+
+
+
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateCopyConstructor"
+                value   ("SubprogramKindSet" 199)  #@FunctionDecl
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "CopyConstructorName"
+                value   "Copy"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineCopyConstructor"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateDestructor"
+                value   ("ProcedureKindSet" 202)  #@ProcedureDecl
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "DestructorName"
+                value   "Free"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineDestructor"
+                value   FALSE
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateTypeEquality"
+                value   ("FunctionKindSet" 201)  #@DoNotCreate
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeEqualityName"
+                value   (value Text 
+|"="
+                )
+            )
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineEquality"
+                value   FALSE
+            )
+
+
+
+
+
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "Representation"
+                value   (value Text "")
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeImplementationSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Tagged"
+                        value   208   #@Tagged
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Record"
+                        value   210   #@Record
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Mixin"
+                        value   211   #@Mixin
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Protected"
+                        value   44   #@Protected
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Task"
+                        value   212   #@Task
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "IncompleteTypeSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotDeclare"
+                        value   1
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "NoDiscriminantPart"
+                        value   2
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "UnknownDiscriminantPart"
+                        value   3
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "KnownDiscriminantPart"
+                        value   4
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordImplementationSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "SingleType"
+                        value   209   #@SingleType
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "MultipleTypes"
+                        value   213   #@MultipleTypes
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ParameterizedImplementationSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Generic"
+                        value   11   #@Generic
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Unconstrained"
+                        value   214   #@Unconstrained
+                    )
+                )
+            )
+
+            (object Attribute
+                tool	"Ada95"
+
+
+
+                name    "TypeVisibilitySet"
+
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Public"
+                        value   45   #@Public
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Private"
+                        value   43   #@Private
+                    )
+
+
+
+
+
+
+
+
+
+
+
+
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+
+
+
+                name    "SubprogramKindSet"
+
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Procedure"
+                        value   202   #@ProcedureDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Function"
+                        value   199   #@FunctionDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "ProcedureKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Procedure"
+                        value   202   #@ProcedureDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "FunctionKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Function"
+                        value   199   #@FunctionDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "TypeControlSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "None"
+                        value   225   #@None
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "InitializationOnly"
+                        value   226   #@InitializationOnly
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "AssignmentFinalizationOnly"
+                        value   227   #@AssignmentFinalizationOnly
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "All"
+                        value   228   #@All
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessTypeSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Always"
+                        value   229   #@Always
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Auto"
+                        value   230   #@Auto
+                    )
+                )
+            )
+
+        )
+    )
+
+    #
+    #   The following are Module-Spec property sets.
+    #
+    (object Attribute
+        tool	"Ada95"
+        name    "default__Module-Spec"
+        value   (list Attribute_Set
+	    (object Attribute
+		tool	"Ada95"
+		name	"Generate"
+		value	TRUE
+	    )
+            (object Attribute
+                tool	"Ada95"
+                name    "CopyrightNotice"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "FileName"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name   "ReturnType"
+                value  ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name   "GenericFormalParameters"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AdditionalWiths"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AdditionalUses"
+                value   (value Text "")
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "IsPrivate"
+                value   FALSE
+            )
+
+        )
+    )
+
+    #
+    #   The following are Module-Body property sets.
+    #
+    (object Attribute
+        tool	"Ada95"
+        name    "default__Module-Body"
+        value   (list Attribute_Set
+	    (object Attribute
+		tool	"Ada95"
+		name	"Generate"
+		value	TRUE
+	    )
+            (object Attribute
+                tool	"Ada95"
+                name    "CopyrightNotice"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "FileName"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name   "ReturnType"
+                value  ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AdditionalWiths"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AdditionalUses"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "IsSubunit"
+                value   FALSE
+            )
+        )
+    )
+
+    #
+    #   The following are Operation property sets.
+    #
+    (object Attribute
+        tool	"Ada95"
+        name    "default__Operation"
+        value   (list Attribute_Set
+            (object Attribute
+                tool	"Ada95"
+                name   "CodeName"
+                value  ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "SubprogramImplementation"
+                value   ("SubprogramImplementationSet" 2) #@Body
+            )
+            (object Attribute
+                tool	"Ada95"
+                name   "Renames"
+                value  ""
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateOverriding"
+                value   TRUE
+            )
+
+
+
+
+
+
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "ImplicitParameterMode"
+                value   ("ParameterModeSet" 203) #@InOut
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ImplicitParameterClassWide"
+                value   FALSE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessOperation"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "Inline"
+                value   FALSE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "EntryCode"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ExitCode"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InitialCodeBody"
+                value   "${default}"
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "EntryBarrierCondition"
+                value   "True"
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "Representation"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "SubprogramImplementationSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Spec"
+                        value   224   #@Spec
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Body"
+                        value   2   #@Body
+                    )
+
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Abstract"
+                        value   221   #@Abstract
+                    )
+
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Renaming"
+                        value   222   #@Renaming
+                    )
+
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "RenamingAsBody"
+                        value   231   #@RenamingAsBody
+                    )
+
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Separate"
+                        value   223   #@Separate
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ParameterModeSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Default"
+                        value   232   #@Default
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "In"
+                        value   204   #@In
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Out"
+                        value   205   #@Out
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "InOut"
+                        value   203   #@InOut
+                    )
+
+
+
+
+
+
+
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Access"
+                        value   220   #@Access
+                    )
+
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+        )
+    )
+
+    #
+    #   The following are Param property sets.
+    #
+    (object Attribute
+        tool	"Ada95"
+        name    "default__Param"
+        value   (list Attribute_Set
+            (object Attribute
+                tool	"Ada95"
+                name    "Mode"
+                value   ("ParameterModeSet" 232) #@Default
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenericFormal"
+                value   ("GenericFormalSet" 1)
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AssociationMapping"
+                value   ("AssociationMappingSet" 1)
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ParameterModeSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Default"
+                        value   232   #@Default
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "In"
+                        value   204   #@In
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Out"
+                        value   205   #@Out
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "InOut"
+                        value   203   #@InOut
+                    )
+
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Access"
+                        value   220   #@Access
+                    )
+
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenericFormalSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Default"
+                        value   1
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Object"
+                        value   2
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Type"
+                        value   3
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Procedure"
+                        value   4
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Function"
+                        value   5
+                    )
+
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Package"
+                        value   6
+                    )
+
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AssociationMappingSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Name"
+                        value   1
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Type"
+                        value   2
+                    )
+                )
+            )
+        )
+    )
+
+    #
+    #   The following are Has property sets.
+    #
+    (object Attribute
+        tool	"Ada95"
+        name    "default__Has"
+        value   (list Attribute_Set
+	    (object Attribute
+		tool	"Ada95"
+		name	"CodeName"
+		value	""
+	    )
+            (object Attribute
+                tool	"Ada95"
+                name    "NameIfUnlabeled"
+                value   "The_${supplier}"
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordFieldImplementation"
+                value   ("RecordFieldImplementationSet" 216)  #@Component
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AccessDiscriminantClassWide"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+
+
+
+                name    "RecordFieldName"
+
+                value   "${relationship}"
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateGet"
+                value   ("FunctionKindSet" 199)  #@FunctionDecl
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessGet"
+                value   ("FunctionKindSet" 201)  #@DoNotCreate
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GetName"
+                value   "Get_${relationship}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineGet"
+                value   TRUE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateSet"
+                value   ("ProcedureKindSet" 202)  #@ProcedureDecl
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessSet"
+                value   ("ProcedureKindSet" 201)  #@DoNotCreate
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "SetName"
+                value   "Set_${relationship}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineSet"
+                value   TRUE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "IsAliased"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "IsConstant"
+                value   FALSE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InitialValue"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "Declare"
+                value   ("DeclareSet" 234) #@After
+            )
+
+
+
+
+
+
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerImplementation"
+                value   ("ContainerImplementationSet" 217) #@Array
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerGeneric"
+                value   "List"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerType"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerDeclarations"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "SelectorName"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "SelectorType"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "DeclareSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Before"
+                        value   233   #@Before
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "After"
+                        value   234   #@After
+                    )
+                )
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordFieldImplementationSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Component"
+                        value   216   #@Component
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Discriminant"
+                        value   218   #@Discriminant
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "AccessDiscriminant"
+                        value   219   #@AccessDiscriminant
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerImplementationSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Array"
+                        value   217   #@Array
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Generic"
+                        value   11   #@Generic
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ProcedureKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Procedure"
+                        value   202   #@ProcedureDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "FunctionKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Function"
+                        value   199   #@FunctionDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+
+        )
+    )
+
+    #
+    #   the following are Class Attribute property sets
+    #
+    (object Attribute
+	tool	"Ada95"
+	name 	"default__Attribute"
+	value	(list Attribute_Set
+	    (object Attribute
+		tool	"Ada95"
+		name	"CodeName"
+		value	""
+	    )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordFieldImplementation"
+                value   ("RecordFieldImplementationSet" 216)  #@Component
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AccessDiscriminantClassWide"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+
+
+
+                name    "RecordFieldName"
+
+                value   "${attribute}"
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateGet"
+                value   ("FunctionKindSet" 199)  #@FunctionDecl
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessGet"
+                value   ("FunctionKindSet" 201)  #@DoNotCreate
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GetName"
+                value   "Get_${attribute}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineGet"
+                value   TRUE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateSet"
+                value   ("ProcedureKindSet" 202)  #@ProcedureDecl
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessSet"
+                value   ("ProcedureKindSet" 201)  #@DoNotCreate
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "SetName"
+                value   "Set_${attribute}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineSet"
+                value   TRUE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "IsAliased"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "IsConstant"
+                value   FALSE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InitialValue"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "Declare"
+                value   ("DeclareSet" 234) #@After
+            )
+
+
+
+
+
+
+
+            (object Attribute
+                tool	"Ada95"
+                name    "Representation"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "DeclareSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Before"
+                        value   233   #@Before
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "After"
+                        value   234   #@After
+                    )
+                )
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordFieldImplementationSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Component"
+                        value   216   #@Component
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Discriminant"
+                        value   218   #@Discriminant
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "AccessDiscriminant"
+                        value   219   #@AccessDiscriminant
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ProcedureKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Procedure"
+                        value   202   #@ProcedureDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "FunctionKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Function"
+                        value   199   #@FunctionDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+
+	)
+    )
+
+    #
+    #   the following are Association property sets
+    #
+    (object Attribute
+	tool	"Ada95"
+	name 	"default__Association"
+	value	(list Attribute_Set
+	    (object Attribute
+		tool	"Ada95"
+		name	"NameIfUnlabeled"
+		value	"The_${targetClass}"
+	    )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateGet"
+                value   ("FunctionKindSet" 199)  #@FunctionDecl
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GetName"
+                value   "Get_${association}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineGet"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateSet"
+                value   ("ProcedureKindSet" 202)  #@ProcedureDecl
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "SetName"
+                value   "Set_${association}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineSet"
+                value   FALSE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAssociate"
+                value   ("ProcedureKindSet" 202)  #@ProcedureDecl
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AssociateName"
+                value   "Associate"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineAssociate"
+                value   FALSE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateDissociate"
+                value   ("ProcedureKindSet" 202)  #@ProcedureDecl
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "DissociateName"
+                value   "Dissociate"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineDissociate"
+                value   FALSE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ProcedureKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Procedure"
+                        value   202   #@ProcedureDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "FunctionKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Function"
+                        value   199   #@FunctionDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+	)
+    )
+
+    #
+    #   the following are Association Role property sets
+    #
+    (object Attribute
+	tool	"Ada95"
+	name 	"default__Role"
+	value	(list Attribute_Set
+	    (object Attribute
+		tool	"Ada95"
+		name	"CodeName"
+		value	""
+	    )
+            (object Attribute
+                tool	"Ada95"
+                name    "NameIfUnlabeled"
+                value   "The_${targetClass}"
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordFieldImplementation"
+                value   ("RecordFieldImplementationSet" 216)  #@Component
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "AccessDiscriminantClassWide"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+
+
+
+                name    "RecordFieldName"
+
+                value   "${target}"
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateGet"
+                value   ("FunctionKindSet" 199)  #@FunctionDecl
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessGet"
+                value   ("FunctionKindSet" 201)  #@DoNotCreate
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GetName"
+                value   "Get_${target}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineGet"
+                value   TRUE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateSet"
+                value   ("ProcedureKindSet" 202)  #@ProcedureDecl
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "GenerateAccessSet"
+                value   ("ProcedureKindSet" 201)  #@DoNotCreate
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "SetName"
+                value   "Set_${target}"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InlineSet"
+                value   TRUE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "IsAliased"
+                value   FALSE
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "IsConstant"
+                value   FALSE
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "InitialValue"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "Declare"
+                value   ("DeclareSet" 234) #@After
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "Representation"
+                value   (value Text "")
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerImplementation"
+                value   ("ContainerImplementationSet" 217) #@Array
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerGeneric"
+                value   "List"
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerType"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerDeclarations"
+                value   (value Text "")
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "SelectorName"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "SelectorType"
+                value   ""
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ProcedureKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Procedure"
+                        value   202   #@ProcedureDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "DeclareSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Before"
+                        value   233   #@Before
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "After"
+                        value   234   #@After
+                    )
+                )
+            )
+
+            (object Attribute
+                tool	"Ada95"
+                name    "RecordFieldImplementationSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Component"
+                        value   216   #@Component
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Discriminant"
+                        value   218   #@Discriminant
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "AccessDiscriminant"
+                        value   219   #@AccessDiscriminant
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "ContainerImplementationSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Array"
+                        value   217   #@Array
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Generic"
+                        value   11   #@Generic
+                    )
+                )
+            )
+            (object Attribute
+                tool	"Ada95"
+                name    "FunctionKindSet"
+                value   (list Attribute_Set
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "Function"
+                        value   199   #@FunctionDecl
+                    )
+                    (object Attribute
+                        tool	"Ada95"
+                        name    "DoNotCreate"
+                        value   201   #@DoNotCreate
+                    )
+                )
+            )
+
+	)
+    )
+
+    #
+    #   The following are Subsystem property sets.
+    #
+    (object Attribute
+        tool	"Ada95"
+        name    "default__Subsystem"
+        value   (list Attribute_Set
+            (object Attribute
+                tool	"Ada95"
+                name    "Directory"
+                value   "AUTO GENERATE"
+            )
+        )
+    )
+)

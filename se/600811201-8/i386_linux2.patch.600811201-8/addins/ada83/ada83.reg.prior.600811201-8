@@ -1,0 +1,39 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\CLSID\{8833138B-3F64-11D1-BC4D-00A024C670D3}]
+@="Rose.Ada83AddIn"
+[HKEY_CLASSES_ROOT\CLSID\{8833138B-3F64-11D1-BC4D-00A024C670D3}\InProcServer32]
+@="%%INSTALL_DIR%%/addins/ada83/%%PLATFORM%%/libada83addin.%%DLL_EXT%%"
+[HKEY_CLASSES_ROOT\CLSID\{8833138B-3F64-11D1-BC4D-00A024C670D3}\ProgID]
+@="Rose.Ada83AddIn"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Ada 83]
+"Active"="Yes"
+"Company"=" IBM Rational Software"
+"Copyright"="Copyright 1997-2007 IBM Corp."
+"MenuFile"="roseada83.mnu"
+"HelpFileName"="roseada"
+"PropertyFile"="roseada83.pty"
+"LanguageAddIn"="Yes"
+"Version"="2006.0.0.705"
+"FundamentalTypes"="Boolean; Character; Duration; Float; Integer; Natural; Positive; String"
+"OLEServer"="Rose.Ada83AddIn"
+"ToolDisplayName"="Ada83"
+"ToolName"="Ada83"
+"InstallDir"="%%INSTALL_DIR%%/addins/ada83"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Ada 83\Custom Settings]
+"SourceViewer"="shellexecute"
+"Analyzer"="reverse_engineer"
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Ada 83\Events]
+"OnActivate"="Interface"
+
+[HKEY_CLASSES_ROOT\Rose.Ada83AddIn]
+@="Rose.Ada83AddIn"
+
+[HKEY_CLASSES_ROOT\Rose.Ada83AddIn\CLSID]
+@="{8833138B-3F64-11D1-BC4D-00A024C670D3}"
+
+[HKEY_CURRENT_USER\SOFTWARE\Rational Software\Rose\Virtual Path Map]
+"ROSEADA83_SOURCE"="$HOME/source"

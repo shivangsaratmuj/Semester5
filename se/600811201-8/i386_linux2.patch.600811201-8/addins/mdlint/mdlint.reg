@@ -1,0 +1,13 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\Rose Model Integrator]
+"Active"="Yes"
+"Company"="IBM Corporation"
+"HelpFileName"="modelint"
+"InstallDir"="%%INSTALL_DIR%%/addins/mdlint"
+"InstallPath"="%%INSTALL_DIR%%/addins/mdlint"
+"LanguageAddIn"="No"
+"MenuFile"="mdlint.mnu"
+"Version"="2006,0,810,3123"
+"Copyright"="Copyright 2000-2008 IBM Corp."
+

@@ -1,0 +1,42 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\clsid\{3FEE794B-8777-11D1-AAC1-00A024C67C00}]
+@="Rose.CORBAAddin.1"
+
+[HKEY_CLASSES_ROOT\clsid\{3FEE794B-8777-11D1-AAC1-00A024C67C00}\InProcServer32]
+@="%%INSTALL_DIR%%/addins/corba/%%PLATFORM%%/libcorba_addin.%%DLL_EXT%%"
+
+[HKEY_CLASSES_ROOT\clsid\{3FEE794B-8777-11D1-AAC1-00A024C67C00}\ProgID]
+@="Rose.CORBAAddin.1"
+
+[HKEY_CLASSES_ROOT\Rose.CORBAAddin.1]
+@="Rose.CORBAAddin.1"
+
+[HKEY_CLASSES_ROOT\Rose.CORBAAddin.1\CLSID]
+@="{3FEE794B-8777-11D1-AAC1-00A024C67C00}"
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\CORBA]
+"Active"="Yes"
+"Company"="IBM Corporation"
+"Copyright"="Copyright 1997-2008 IBM Corp."
+"FundamentalTypes"="short; long; long long; unsigned short; unsigned long; unsigned long long; float; double; long double; char; boolean; wchar; octet; any;string; wstring; sequence; fixed; Object"
+"InstallDir"="%%INSTALL_DIR%%/addins/corba"
+"LanguageAddIn"="Yes"
+"MenuFile"="corba.mnu"
+"OLEServer"="Rose.CORBAAddin.1"
+"PropertyFile"="corba.pty"
+"Version"="2006,0,810,3123"
+"HelpFileName"="corba"
+"StereotypeCfgFile"="stereocorba.ini"
+"OverWriteModule"="No"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\CORBA\Events]
+"OnActivate"="Interface"
+"OnBrowseBody"="Interface"
+"OnBrowseHeader"="Interface"
+"OnGenerateCode"="Interface"
+"OnSelectedContextMenuItem"="Interface"
+"OnEnableContextMenuItems"="Interface"
+"OnNewModel"="Interface"
+"OnOpenModel"="Interface"

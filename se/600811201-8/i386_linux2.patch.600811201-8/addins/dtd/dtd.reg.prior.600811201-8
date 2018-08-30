@@ -1,0 +1,38 @@
+REGEDIT4
+[HKEY_CLASSES_ROOT\clsid\{a187b2f0-835d-11d3-ba21-00105a13397c}]
+@="Rose.XMLDTDAddin"
+[HKEY_CLASSES_ROOT\clsid\{a187b2f0-835d-11d3-ba21-00105a13397c}\InProcServer32]
+@="%%INSTALL_DIR%%/addins/dtd/%%PLATFORM%%/libdtd_addin.%%DLL_EXT%%"
+
+[HKEY_CLASSES_ROOT\clsid\{a187b2f0-835d-11d3-ba21-00105a13397c}\ProgID]
+@="Rose.XMLDTDAddin"
+
+[HKEY_CLASSES_ROOT\Rose.XMLDTDAddin]
+@="Rose.XMLDTDAddin"
+
+[HKEY_CLASSES_ROOT\Rose.XMLDTDAddin\CLSID]
+@="{a187b2f0-835d-11d3-ba21-00105a13397c}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\XML_DTD]
+"Active"="Yes"
+"Company"="IBM Corporation"
+"Copyright"="Copyright 1999-2008 IBM Corp."
+"FundamentalTypes"=""
+"InstallDir"="%%INSTALL_DIR%%/addins/dtd"
+"LanguageAddIn"="Yes"
+"MenuFile"="xmldtd.mnu"
+"OLEServer"="Rose.XMLDTDAddin"
+"PropertyFile"="xmldtd.pty"
+"Version"="2006,0,810,1623"
+"HelpFileName"="xmldtd"
+"StereotypeCfgFile"="stereoxmldtd.ini"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rose\AddIns\XML_DTD\Events]
+"AIRunAnalyzer"="Interface"
+"EditProjectProperties"="Interface"
+"OnActivate"="Interface"
+"OnBrowseBody"="Interface"
+"OnEnableContextMenuItems"="Interface"
+"OnGenerateCode"="Interface"
+"OnSelectedContextMenuItem"="Interface"
+
